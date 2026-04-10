@@ -47,7 +47,7 @@ const HomePage = () => (
 
 function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <div className="min-h-screen bg-slate-50 font-sans text-slate-900 selection:bg-primary/10 selection:text-primary">
         <Header />
         <Routes>
