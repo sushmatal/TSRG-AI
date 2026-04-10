@@ -10,7 +10,7 @@ const Footer = () => {
                     {/* Left Column: Candid Seal */}
                     <div className="md:col-span-3 flex justify-center md:justify-start">
                         <img
-                            src="/TSRG gold seal 2025.svg"
+                            src={`${import.meta.env.BASE_URL}TSRG gold seal 2025.svg`}
                             alt="Candid Gold Transparency 2025 Seal"
                             className="w-36 h-36 object-contain"
                         />

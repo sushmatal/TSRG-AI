@@ -87,7 +87,7 @@ const Header = () => {
             <div className="container mx-auto px-6 max-w-7xl flex items-center justify-between">
                 <Link to="/" className="flex items-center group">
                     <img
-                        src="/TSRGlogo.png"
+                        src={`${import.meta.env.BASE_URL}TSRGlogo.png`}
                         alt="TSRG Logo"
                         className="h-10 md:h-12 w-auto object-contain transition-all duration-500 group-hover:scale-105"
                     />

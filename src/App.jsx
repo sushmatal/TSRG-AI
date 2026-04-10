@@ -1,14 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
-import Hero from './components/Hero'
-import StorySection from './components/StorySection'
-import ImpactSection from './components/ImpactSection'
-import Services from './components/Services'
-import BlogSection from './components/BlogSection'
-import PartnersSection from './components/PartnersSection'
-import TestimonialsSection from './components/TestimonialsSection'
 import Footer from './components/Footer'
+import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import TeamPage from './pages/TeamPage'
 import DashboardPage from './pages/DashboardPage'
@@ -32,18 +26,6 @@ import {
   BenzodiazepinesPage,
   OpioidsPage
 } from './pages/PlaceholderPages'
-
-const HomePage = () => (
-  <main>
-    <Hero />
-    <StorySection />
-    <ImpactSection />
-    <Services />
-    <TestimonialsSection />
-    <PartnersSection />
-    <BlogSection />
-  </main>
-)
 
 function App() {
   return (
