@@ -16,12 +16,13 @@ import InsightsPage from './pages/InsightsPage'
 import InsightDetailPage from './pages/InsightDetailPage'
 import ResearchPage from './pages/ResearchPage'
 import ContactPage from './pages/ContactPage'
+import PodcastPage from './pages/PodcastPage'
+import DonatePage from './pages/DonatePage'
 import { 
   BlogPage,
   FAQsPage,
   PartnersPage,
   GatewayToWorkPage,
-  PodcastsPage,
   PIMSFormsPage,
   ScholarshipsPage,
   WorkgroupsPage,
@@ -65,7 +66,7 @@ function App() {
           <Route path="/programs/dashboard" element={<DashboardPage />} />
           <Route path="/programs/gateway-to-work" element={<GatewayToWorkPage />} />
           <Route path="/programs/outreach" element={<OutreachPage />} />
-          <Route path="/programs/podcasts" element={<PodcastsPage />} />
+          <Route path="/programs/podcasts" element={<PodcastPage />} />
           <Route path="/programs/pims-forms" element={<PIMSFormsPage />} />
           <Route path="/programs/scholarships" element={<ScholarshipsPage />} />
           <Route path="/programs/workgroups" element={<WorkgroupsPage />} />
@@ -78,6 +79,9 @@ function App() {
           <Route path="/insights/research/opioids" element={<OpioidsPage />} />
           <Route path="/insights/events" element={<EventsPage />} />
           <Route path="/insights/publications" element={<PublicationsPage />} />
+          
+          {/* Get Involved */}
+          <Route path="/get-involved/donate" element={<DonatePage />} />
         </Routes>
         <Footer />
       </div>

@@ -1,8 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import PageHero from '../components/PageHero';
 import { Mail, Phone, MapPin, Send, MessageSquare, Globe, Heart } from 'lucide-react';
-
 const ContactInfoCard = ({ icon: Icon, title, content, link, delay }) => (
     <motion.div 
         initial={{ opacity: 0, x: -20 }}
@@ -30,7 +30,7 @@ const ContactPage = () => {
         <div className="min-h-screen bg-white">
             <PageHero 
                 title="Contact Us" 
-                subtitle="Have a question about our research or want to partner with us? Reach out and start the conversation."
+                subtitle="TSRG is a Colorado-based non-profit whose mission is to improve outcomes associated with addiction-prone substances."
                 breadcrumbs={[{ name: 'Connect', href: '#' }]}
             />
 
@@ -81,9 +81,9 @@ const ContactPage = () => {
                         <div className="flex flex-col gap-8 justify-center">
                             <div className="mb-12">
                                 <span className="text-primary font-black tracking-[0.3em] uppercase text-xs mb-4 block">Get in Touch</span>
-                                <h2 className="text-4xl md:text-5xl font-black text-secondary leading-tight mb-6">Let's build rural <br />resilience together.</h2>
+                                <h2 className="text-4xl md:text-5xl font-black text-secondary leading-tight mb-6">Let's connect <br />with our team.</h2>
                                 <p className="text-slate-500 text-lg leading-relaxed max-w-md">
-                                    TSRG operates as a backbone partner, and we're always looking for new collaborators to strengthen the network.
+                                    For general inquiries, please fill out our contact form and a team member will respond shortly.
                                 </p>
                             </div>
 
@@ -91,20 +91,21 @@ const ContactPage = () => {
                                 <ContactInfoCard 
                                     icon={Mail} 
                                     title="Email Us" 
-                                    content="info@tsrg.org" 
-                                    link="mailto:info@tsrg.org"
+                                    content="terri@tsrg.org" 
+                                    link="mailto:terri@tsrg.org"
                                     delay={0.1}
                                 />
                                 <ContactInfoCard 
                                     icon={Phone} 
                                     title="Call Us" 
-                                    content="Contact for details" 
+                                    content="+1 720-234-8191" 
+                                    link="tel:+17202348191"
                                     delay={0.2}
                                 />
                                 <ContactInfoCard 
                                     icon={MapPin} 
                                     title="Main Office" 
-                                    content="California, United States" 
+                                    content="P.O. Box 371342, Denver, CO 80237" 
                                     delay={0.3}
                                 />
                             </div>
@@ -129,7 +130,7 @@ const ContactPage = () => {
                 <div className="absolute inset-0 flex items-center justify-center">
                     <div className="bg-white px-8 py-4 rounded-full shadow-2xl flex items-center gap-3">
                         <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse" />
-                        <span className="text-xs font-black uppercase tracking-widest text-secondary">Service Region: California Hub</span>
+                        <span className="text-xs font-black uppercase tracking-widest text-secondary">Service Region: Colorado</span>
                     </div>
                 </div>
             </section>
