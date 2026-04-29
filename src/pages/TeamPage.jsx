@@ -4,7 +4,7 @@ import PageHero from '../components/PageHero';
 import { Mail, Linkedin, ChevronRight, X, User } from 'lucide-react';
 
 const TeamMemberCard = ({ member, onClick, delay }) => (
-    <motion.div 
+    <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -13,9 +13,9 @@ const TeamMemberCard = ({ member, onClick, delay }) => (
         className="group bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer flex flex-col"
     >
         <div className="aspect-[4/5] relative overflow-hidden">
-            <img 
-                src={member.image} 
-                alt={member.name} 
+            <img
+                src={member.image}
+                alt={member.name}
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
                 onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1000&auto=format&fit=crop"; }}
             />
@@ -38,20 +38,20 @@ const TeamModal = ({ member, onClose }) => {
 
     return (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
-            <motion.div 
-                initial={{ opacity: 0 }} 
-                animate={{ opacity: 1 }} 
-                exit={{ opacity: 0 }} 
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
                 onClick={onClose}
                 className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm"
             />
-            <motion.div 
+            <motion.div
                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
                 className="relative w-full max-w-5xl bg-white rounded-[3rem] overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[90vh]"
             >
-                <button 
+                <button
                     onClick={onClose}
                     className="absolute top-6 right-6 w-10 h-10 bg-white/50 hover:bg-slate-100 backdrop-blur-md rounded-full flex items-center justify-center text-slate-500 transition-all z-10"
                 >
@@ -59,14 +59,14 @@ const TeamModal = ({ member, onClose }) => {
                 </button>
 
                 <div className="w-full md:w-1/2 aspect-square md:aspect-auto relative bg-slate-100">
-                    <img 
-                        src={member.image} 
-                        alt={member.name} 
+                    <img
+                        src={member.image}
+                        alt={member.name}
                         className="w-full h-full object-cover"
                         onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1000&auto=format&fit=crop"; }}
                     />
                 </div>
-                
+
                 <div className="w-full md:w-1/2 p-8 md:p-12 overflow-y-auto">
                     <div className="mb-8">
                         <h2 className="text-3xl font-black text-secondary mb-2">{member.name}</h2>
@@ -76,7 +76,7 @@ const TeamModal = ({ member, onClose }) => {
                     <div className="space-y-6 text-slate-600 leading-relaxed font-medium">
                         {/* We use a formatted version of the bio here. For mock, it's a single string. */}
                         <p>{member.bio}</p>
-                        
+
                         {/* Extra placeholder details since the modal is larger */}
                         <div className="pt-6 border-t border-slate-100 grid grid-cols-1 md:grid-cols-2 gap-6">
                             {member.education && (
@@ -178,6 +178,14 @@ const TeamPage = () => {
             bio: "Lauren Kerr earned her Master of Public Health in Health Systems, Management & Policy from the Colorado School of Public Health, with a certificate in Applied Biostatistics. During her time at TSRG, she worked with communities in rural Southeast Colorado to improve opioid-related health outcomes through community outreach, coalition building, and applied research. Her work included data collection and analysis, report writing, and supporting local partners in developing programs and services to address the substance use crisis. Lauren now serves as an Information Science Research Professional at the University of Colorado Anschutz, where she works on advanced statistical analyses and simulation modeling projects with a focus on substance use and homelessness. She is passionate about using data-driven research to inform policy and decision-making to improve health outcomes. Lauren will continue to support TSRG projects on an as-needed basis as a Public Health Consultant."
         },
         {
+            name: "Tori Hodkin",
+            role: "TSRG AmeriCorps Vista Member 2026",
+            image: `${baseUrl}Team/Tori.png`,
+            contentFocus: "Workforce Development",
+            education: "B.A. in Sociology and Research Methods",
+            bio: "Tori Hodkin graduated from Colorado College in 2025 with a B.A. in Sociology and Research Methods. She joins TSRG as an AmeriCorps VISTA, assisting in program implementation for the Workforce Development Program for People in Recovery. A combination of outreach and research, the project is currently focusing on developing a tool to gauge aptitudes and skillsets of those navigating SUD. Outside of work, Tori enjoys biking and hiking, listening to live music, collaging, playing boardgames, and spending time with her cat."
+        },
+        {
             name: "Heidi McNeely",
             role: "Board President",
             image: `${baseUrl}Team/Heidi-McNeely_2021.jpg`,
@@ -232,16 +240,10 @@ const TeamPage = () => {
             contentFocus: "Information technology and nonprofit management",
             education: "B.A.Sc. Computer Science, University of Colorado at Boulder",
             bio: "Arthur Segall is a Vice President and financial advisor with Morgan Stanley. He has worked in the financial services industry for over 30 years and contributes his business acumen to TSRGâ€™s Advisory Council. He was a board member for three years (2021 â€“ 2023) and helped TSRG through a major growth phase by helping implement core systems and processes. Arthur provided guidance and feedback through this rapidly changing and critical phase of development."
-        },
-        {
-            name: "Tori Hodkin",
-            role: "TSRG AmeriCorps Vista Member 2026",
-            image: `${baseUrl}Team/Tori.png`,
-            contentFocus: "Workforce Development",
-            education: "B.A. in Sociology and Research Methods",
-            bio: "Tori Hodkin graduated from Colorado College in 2025 with a B.A. in Sociology and Research Methods. She joins TSRG as an AmeriCorps VISTA, assisting in program implementation for the Workforce Development Program for People in Recovery. A combination of outreach and research, the project is currently focusing on developing a tool to gauge aptitudes and skillsets of those navigating SUD. Outside of work, Tori enjoys biking and hiking, listening to live music, collaging, playing boardgames, and spending time with her cat."
         }
+
     ];
+    const sortedTeam = [...team].sort((a, b) => b.name.localeCompare(a.name));
 
     // Lock body scroll when modal is open
     React.useEffect(() => {
@@ -255,8 +257,8 @@ const TeamPage = () => {
 
     return (
         <div className="min-h-screen bg-slate-50">
-            <PageHero 
-                title="Our Team" 
+            <PageHero
+                title="Our Team"
                 subtitle="A diverse collective of researchers, advocates, and data scientists dedicated to rural resilience."
                 breadcrumbs={[{ name: 'About', href: '/about' }]}
             />
@@ -269,12 +271,12 @@ const TeamPage = () => {
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {team.map((member, i) => (
-                            <TeamMemberCard 
-                                key={i} 
-                                member={member} 
-                                delay={i * 0.1} 
-                                onClick={setSelectedMember} 
+                        {sortedTeam.map((member, i) => (
+                            <TeamMemberCard
+                                key={i}
+                                member={member}
+                                delay={i * 0.1}
+                                onClick={setSelectedMember}
                             />
                         ))}
                     </div>
@@ -298,7 +300,7 @@ const TeamPage = () => {
                         <div className="flex -space-x-6">
                             {[1, 2, 3, 4].map(i => (
                                 <div key={i} className="w-16 h-16 md:w-24 md:h-24 rounded-full border-4 border-white overflow-hidden shadow-xl">
-                                    <img src={`https://i.pravatar.cc/150?img=${i+10}`} alt="Team" className="w-full h-full object-cover" />
+                                    <img src={`https://i.pravatar.cc/150?img=${i + 10}`} alt="Team" className="w-full h-full object-cover" />
                                 </div>
                             ))}
                         </div>
@@ -309,9 +311,9 @@ const TeamPage = () => {
             {/* Modal Portal */}
             <AnimatePresence>
                 {selectedMember && (
-                    <TeamModal 
-                        member={selectedMember} 
-                        onClose={() => setSelectedMember(null)} 
+                    <TeamModal
+                        member={selectedMember}
+                        onClose={() => setSelectedMember(null)}
                     />
                 )}
             </AnimatePresence>
