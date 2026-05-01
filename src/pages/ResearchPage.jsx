@@ -58,6 +58,7 @@ const ResearchPage = () => {
                 title="Research Initiatives" 
                 subtitle="Methodologies built for rural contexts, addressing the most pressing public health challenges of our time."
                 breadcrumbs={[{ name: 'Work', href: '#' }]}
+                backgroundImage={`${import.meta.env.BASE_URL}Header%20Images/Generic%20Banner.png`}
             />
 
             <section className="py-24">

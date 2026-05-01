@@ -37,6 +37,7 @@ const DashboardPage = () => {
                 title="Impact Dashboard" 
                 subtitle="Real-time transparency into our community outreach, clinical resources, and harm reduction metrics."
                 breadcrumbs={[{ name: 'Programs', href: '/programs' }]}
+                backgroundImage={`${import.meta.env.BASE_URL}Header%20Images/Generic%20Banner.png`}
             />
 
             {/* Toolbar */}

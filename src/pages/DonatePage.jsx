@@ -40,6 +40,7 @@ const DonatePage = () => {
                 title="Support Our Mission" 
                 subtitle="Your donation will support our internship program, our research, and contribute to our operating budget. For every dollar you contribute, we are one step closer to finding wide-ranging solutions to the opioid epidemic."
                 breadcrumbs={[{ name: 'Donate', href: '#' }]}
+                backgroundImage={`${import.meta.env.BASE_URL}Header%20Images/Generic%20Banner.png`}
             />
 
             {/* Digital Donation Platforms */}

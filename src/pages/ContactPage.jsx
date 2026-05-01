@@ -32,6 +32,7 @@ const ContactPage = () => {
                 title="Contact Us"
                 subtitle="Have a question about our research or want to partner with us? Reach out and start the conversation."
                 breadcrumbs={[{ name: 'Connect', href: '#' }]}
+                backgroundImage={`${import.meta.env.BASE_URL}Header%20Images/Generic%20Banner.png`}
             />
 
             <section className="py-24 relative overflow-hidden">

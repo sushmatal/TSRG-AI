@@ -76,59 +76,11 @@ const PodcastPage = () => {
     return (
         <div className="min-h-screen bg-slate-50">
             {/* Custom Audio-Themed Hero */}
-            <section className="relative pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-900 text-white">
-                <div className="absolute inset-0 opacity-20">
-                    <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-                    <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary opacity-20 blur-[100px]"></div>
-                </div>
-                
-                <div className="container mx-auto px-6 max-w-7xl relative z-10">
-                    <div className="flex flex-col lg:flex-row gap-16 items-center">
-                        <motion.div 
-                            initial={{ opacity: 0, x: -30 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            className="flex-1 text-center lg:text-left"
-                        >
-                            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-primary font-black text-xs uppercase tracking-[0.2em] mb-8">
-                                <Mic size={14} className="animate-pulse" /> Official Podcast
-                            </span>
-                            <h1 className="text-5xl lg:text-7xl font-black mb-8 leading-tight">
-                                A Path <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Forward.</span>
-                            </h1>
-                            <p className="text-xl text-slate-300 mb-12 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                                A Path Forward is a podcast that discusses the substance use crisis and the work being conducted in Otero, Crowley, Bent and Conejos counties.
-                            </p>
-                            
-                            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
-                                <PlatformButton platform="Spotify" icon={Headphones} />
-                                <PlatformButton platform="Apple Podcasts" icon={Play} />
-                            </div>
-                        </motion.div>
-                        
-                        {/* Hero Graphic */}
-                        <motion.div 
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: 0.2 }}
-                            className="flex-1 w-full max-w-md lg:max-w-none"
-                        >
-                            <div className="aspect-square rounded-[3rem] bg-gradient-to-tr from-slate-800 to-slate-900 border border-white/10 p-8 shadow-2xl relative overflow-hidden group">
-                                <div className="absolute inset-0 bg-primary/5 mix-blend-overlay group-hover:bg-primary/20 transition-all duration-700" />
-                                <img 
-                                    src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=1000&auto=format&fit=crop" 
-                                    alt="Podcast Microphone" 
-                                    className="w-full h-full object-cover rounded-[2rem] opacity-70 group-hover:scale-105 transition-transform duration-700"
-                                />
-                                <div className="absolute inset-0 flex items-center justify-center">
-                                    <button className="w-24 h-24 bg-white/10 backdrop-blur-md rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:scale-110 transition-all shadow-2xl">
-                                        <Play size={40} className="ml-2" fill="currentColor" />
-                                    </button>
-                                </div>
-                            </div>
-                        </motion.div>
-                    </div>
-                </div>
-            </section>
+            <PageHero 
+                title="Official Podcast"
+                subtitle="A Path Forward is a podcast that discusses the substance use crisis and the work being conducted in Otero, Crowley, Bent and Conejos counties."
+                backgroundImage={`${import.meta.env.BASE_URL}Header%20Images/Generic%20Banner.png`}
+            />
 
             {/* Recent Episodes */}
             <section className="py-24 relative">

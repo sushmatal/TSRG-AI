@@ -169,6 +169,7 @@ const InsightsPage = () => {
                 title="Blog" 
                 subtitle="Blog posts provide the latest information on our project activities, newsletters and other noteworthy events."
                 breadcrumbs={[{ name: 'Blog', href: '#' }]}
+                backgroundImage={`${import.meta.env.BASE_URL}Header%20Images/Generic%20Banner.png`}
             />
 
             {/* Filter Bar */}

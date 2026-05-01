@@ -6,94 +6,12 @@ import {
   HeartHandshake, Microscope, TrendingUp, Building2,
   Activity, ShieldPlus, Wine, Leaf, Wind
 } from 'lucide-react';
+import PageHero from '../components/PageHero';
 
 /* ─────────────────────────────────────────────
    1. HERO
    Refined to feel more modern and highlight the community-first approach.
 ───────────────────────────────────────────── */
-const Hero = () => (
-  <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#0a1628]">
-    {/* Background */}
-    <div className="absolute inset-0 z-0">
-      <img
-        src={`${import.meta.env.BASE_URL}about_header_community_strategy_1773950920170.png`}
-        alt="Community Strategy"
-        className="w-full h-full object-cover object-center opacity-40"
-      />
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628]/95 via-[#0a1628]/80 to-transparent" />
-      
-      {/* Animated accent elements */}
-      <motion.div 
-        animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
-        transition={{ duration: 8, repeat: Infinity }}
-        className="absolute top-20 right-[10%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px]"
-      />
-      <motion.div 
-        animate={{ scale: [1.2, 1, 1.2], opacity: [0.2, 0.4, 0.2] }}
-        transition={{ duration: 10, repeat: Infinity }}
-        className="absolute -bottom-20 -left-[5%] w-[400px] h-[400px] bg-accent/20 rounded-full blur-[100px]"
-      />
-    </div>
-
-    <div className="container mx-auto px-6 relative z-10 max-w-6xl py-32">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-        className="text-center md:text-left"
-      >
-        <span className="inline-flex items-center gap-2 py-2 px-5 rounded-full bg-white/5 backdrop-blur-md text-[#FCE6A3] text-[10px] font-black tracking-[0.4em] uppercase mb-8 border border-white/10">
-          <span className="w-1.5 h-1.5 bg-[#FCE6A3] rounded-full animate-pulse" />
-          Established 2018
-        </span>
-
-        <h1 className="text-5xl md:text-8xl font-black text-white leading-[1.1] mb-8 tracking-tighter">
-          From Data to <span className="text-[#FCE6A3] italic">Impact.</span><br />
-          Research that <span className="text-accent">Empowers.</span>
-        </h1>
-
-        <p className="text-xl md:text-2xl text-white/70 mb-12 leading-relaxed max-w-3xl font-medium">
-          TSRG brings people, data, and action together to reduce substance use harm and build healthier futures.
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-5 justify-center md:justify-start">
-          <motion.a
-            href="#who-we-are"
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.98 }}
-            className="inline-flex items-center gap-3 bg-[#FCE6A3] text-[#0a1628] font-black px-10 py-5 rounded-2xl text-xs tracking-widest uppercase hover:bg-white transition-all shadow-xl shadow-yellow-500/10"
-          >
-            Learn Our Story <ArrowRight size={16} />
-          </motion.a>
-          <motion.a
-            href="#explore-work"
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.98 }}
-            className="inline-flex items-center gap-3 bg-white/5 backdrop-blur-md text-white font-black px-10 py-5 rounded-2xl text-xs tracking-widest uppercase hover:bg-white/10 transition-all border border-white/20"
-          >
-            Explore Our Work <BookOpen size={16} />
-          </motion.a>
-        </div>
-      </motion.div>
-    </div>
-
-    {/* Scroll cue */}
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 1.5 }}
-      className="absolute bottom-10 left-1/2 -translate-x-1/2"
-    >
-      <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center p-1">
-        <motion.div 
-          animate={{ y: [0, 12, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-          className="w-1 h-2 bg-white/40 rounded-full"
-        />
-      </div>
-    </motion.div>
-  </section>
-);
 
 /* ─────────────────────────────────────────────
    2. WHO WE ARE
@@ -388,15 +306,24 @@ const ContactCTA = () => (
 /* ─────────────────────────────────────────────
    PAGE ASSEMBLY
 ───────────────────────────────────────────── */
-const AboutPage = () => (
-  <main className="bg-white pt-20">
-    <Hero />
-    <WhoWeAre />
-    <ImpactMetrics />
-    <ExploreOurWork />
-    <HowWeWork />
-    <ContactCTA />
-  </main>
-);
+const AboutPage = () => {
+  const baseUrl = import.meta.env.BASE_URL;
+  
+  return (
+    <main className="bg-white pt-20">
+      <PageHero
+        title="About TSRG"
+        subtitle="TSRG brings people, data, and action together to reduce substance use harm and build healthier futures."
+        backgroundImage={`${baseUrl}Header%20Images/Generic%20Banner.png`}
+        imageAlignment="object-center"
+      />
+      <WhoWeAre />
+      <ImpactMetrics />
+      <ExploreOurWork />
+      <HowWeWork />
+      <ContactCTA />
+    </main>
+  );
+};
 
 export default AboutPage;

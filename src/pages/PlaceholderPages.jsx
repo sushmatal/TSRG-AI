@@ -7,6 +7,7 @@ const ComingSoon = ({ title, category }) => (
             title={title} 
             subtitle={`Exploring the impact and evidence behind our ${title.toLowerCase()} efforts.`}
             breadcrumbs={[{ name: category, href: '#' }]}
+            backgroundImage={`${import.meta.env.BASE_URL}Header%20Images/Generic%20Banner.png`}
         />
         <section className="py-24">
             <div className="container mx-auto px-6 max-w-7xl">
