@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const PageHero = ({ title, subtitle, breadcrumbs = [], backgroundImage }) => {
+const PageHero = ({ title, subtitle, breadcrumbs = [], backgroundImage, imageAlignment = 'object-center' }) => {
     return (
         <section className="relative pt-32 pb-20 overflow-hidden bg-slate-900 border-b border-white/5">
             {/* Background Image Overlay */}
@@ -12,7 +12,7 @@ const PageHero = ({ title, subtitle, breadcrumbs = [], backgroundImage }) => {
                     <img 
                         src={backgroundImage} 
                         alt={title} 
-                        className="w-full h-full object-cover object-center opacity-40" 
+                        className={`w-full h-full object-cover ${imageAlignment} opacity-40`} 
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
                 </div>

@@ -262,6 +262,7 @@ const TeamPage = () => {
                 subtitle="A diverse collective of researchers, advocates, and data scientists dedicated to rural resilience."
                 breadcrumbs={[{ name: 'About', href: '/about' }]}
                 backgroundImage={`${baseUrl}Header%20Images/Our_Team.png`}
+                imageAlignment="object-top"
             />
 
             <section className="py-24 bg-slate-50/50">
