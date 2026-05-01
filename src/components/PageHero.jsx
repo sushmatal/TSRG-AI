@@ -44,7 +44,7 @@ const PageHero = ({ title, subtitle, breadcrumbs = [], backgroundImage, imageAli
                     <motion.h1 
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight tracking-tight"
+                        className="text-5xl md:text-7xl font-black text-[#FCE6A3] mb-6 leading-tight tracking-tight"
                     >
                         {title}
                     </motion.h1>

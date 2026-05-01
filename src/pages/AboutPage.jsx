@@ -34,34 +34,23 @@ const WhoWeAre = () => (
               Bridging the Gap Between <span className="text-primary italic">Data</span> and <span className="text-primary">Action.</span>
             </h2>
             
-            <div className="space-y-8 text-slate-600 text-lg leading-relaxed font-medium">
-              <p className="text-[#0a1628] text-2xl font-bold leading-snug">
-                The Schreiber Research Group (TSRG) is a Colorado-based nonprofit organization dedicated to improving outcomes related to substance misuse through research, education, and community-driven initiatives.
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
-                <div className="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100">
-                  <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-5">
-                    <Zap size={24} />
-                  </div>
-                  <p className="text-sm leading-relaxed">
-                    We exist to turn research into real-world action, helping communities respond more effectively to the substance use crisis through evidence, collaboration, and practical solutions.
-                  </p>
-                </div>
-                <div className="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100">
-                  <div className="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mb-5">
-                    <Network size={24} />
-                  </div>
-                  <p className="text-sm leading-relaxed">
-                    Since its founding in 2018, TSRG has grown into a multi-state, interdisciplinary organization working across public health, policy, data science, and community systems.
-                  </p>
-                </div>
-              </div>
+              <div className="space-y-8 text-slate-600 text-lg leading-relaxed font-medium">
+                <p className="text-[#0a1628] text-2xl font-bold leading-snug">
+                  The Schreiber Research Group (TSRG) is a Colorado-based nonprofit organization dedicated to improving outcomes related to substance misuse through research, education, and community-driven initiatives.
+                </p>
+                
+                <p>
+                  We exist to turn research into real-world action, helping communities respond more effectively to the substance use crisis through evidence, collaboration, and practical solutions.
+                </p>
 
-              <p className="pt-4">
-                Our work bridges the gap between data and action so communities can build systems that are not only effective but also sustainable and resilient. We don't just study problems—we help communities solve them together.
-              </p>
-            </div>
+                <p>
+                  Our work bridges the gap between data and action so communities can build systems that are not only effective but also sustainable and resilient.
+                </p>
+
+                <p>
+                  Since its founding in 2018, TSRG has grown into a multi-state, interdisciplinary organization working across public health, policy, data science, and community systems to drive meaningful change.
+                </p>
+              </div>
           </motion.div>
         </div>
 
@@ -131,20 +120,30 @@ const ExploreOurWork = () => {
             <h2 className="text-4xl md:text-6xl font-black text-white mb-8 leading-tight">
               Data Solutions for <span className="text-accent italic">Resilient Communities.</span>
             </h2>
-            <p className="text-white/60 text-lg font-medium leading-relaxed mb-10">
-              Our work focuses on one core goal: turning data into solutions that communities can use to solve problems. We study the substance use crisis through a public health lens, combining research, lived experience, and community collaboration.
-            </p>
+            <div className="text-white/60 text-lg font-medium leading-relaxed space-y-6">
+              <p>
+                Our work focuses on one core goal: turning data into solutions that communities can use to solve problems. We study the substance use crisis through a public health lens, combining research, lived experience, and community collaboration to better understand what works, where gaps exist, and how systems can improve.
+              </p>
+              <p>
+                From opioids to benzodiazepines and other substances, including alcohol, marijuana, and vaping products, we conduct research that informs prevention, treatment, and recovery efforts across both rural and urban communities.
+              </p>
+            </div>
           </motion.div>
           
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="p-10 bg-white/5 backdrop-blur-sm rounded-[3rem] border border-white/10"
+            className="hidden lg:block p-10 bg-white/5 backdrop-blur-sm rounded-[3rem] border border-white/10"
           >
-            <p className="text-white/80 text-lg leading-relaxed italic">
-              "From rural ridges to urban centers, we conduct research that informs prevention, treatment, and recovery efforts across diverse landscapes."
-            </p>
+            <div className="aspect-square relative overflow-hidden rounded-2xl">
+              <img 
+                src={`${import.meta.env.BASE_URL}strategic_infrastructure_backbone_1773950424182.png`}
+                alt="Research Impact"
+                className="w-full h-full object-cover opacity-60"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent" />
+            </div>
           </motion.div>
         </div>
 

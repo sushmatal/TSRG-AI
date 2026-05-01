@@ -34,9 +34,9 @@ const Hero = () => {
                         Knowledge for Change
                     </span>
 
-                    <h1 className="text-3xl md:text-5xl lg:text-5xl font-black text-white leading-[1.1] mb-8 tracking-tight drop-shadow-lg uppercase max-w-5xl mx-auto">
-                        Turning <span className="text-[#FCE6A3] italic">Data</span> into Stories, <br className="hidden md:block" />
-                        Stories into <span className="text-[#FCE6A3] italic">Change</span>.
+                    <h1 className="text-3xl md:text-5xl lg:text-5xl font-black text-[#FCE6A3] leading-[1.1] mb-8 tracking-tight drop-shadow-lg uppercase max-w-5xl mx-auto">
+                        Turning <span className="italic">Data</span> into Stories, <br className="hidden md:block" />
+                        Stories into <span className="italic">Change</span>.
                     </h1>
 
                     <p className="text-base md:text-lg lg:text-xl text-white mb-10 leading-relaxed max-w-2xl mx-auto font-medium drop-shadow-md">
@@ -425,10 +425,10 @@ const PartnersSection = () => {
         "Benzos.png", "Benzowise.jpg", "CCPDAP_LOGO_PNG-1024x285-2.png",
         "CRHC-Logo.fw_-1.png", "Creative Treatment Options.png",
         "Crowley-County-Colorado.png", "Denver Public Schools.png",
-        "GSN logo white background.png", "PDPHE-1.png",
-        "Purezone-HRSA-Logo-1.png", "SECAHEC High Quality.png",
+        "Denver Recovery Group.png", "GSN logo white background.png", 
+        "PDPHE-1.png", "Purezone-HRSA-Logo-1.png", "SECAHEC High Quality.png",
         "SLV_AHEC_logo.png", "SpringTransits-2.png",
-        "bent_county.png", "otero_county_LOGO-tm-sm.png", "southeast.png"
+        "bent_county.png", "otero_county_LOGO-tm-sm.png"
     ];
 
     return (
