@@ -12,7 +12,7 @@ const PageHero = ({ title, subtitle, breadcrumbs = [], backgroundImage }) => {
                     <img 
                         src={backgroundImage} 
                         alt={title} 
-                        className="w-full h-full object-cover opacity-20 grayscale brightness-50" 
+                        className="w-full h-full object-cover object-center opacity-40" 
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
                 </div>

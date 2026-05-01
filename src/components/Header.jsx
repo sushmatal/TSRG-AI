@@ -89,7 +89,7 @@ const Header = () => {
                     <img
                         src={`${import.meta.env.BASE_URL}TSRGlogo.png`}
                         alt="TSRG Logo"
-                        className="h-10 md:h-12 w-auto object-contain transition-all duration-500 group-hover:scale-105"
+                        className="h-[50px] md:h-[60px] w-auto object-contain transition-all duration-500 group-hover:scale-105"
                     />
                 </Link>
 
