@@ -26,10 +26,6 @@ const Header = () => {
 
     const navigation = [
         {
-            name: 'Home',
-            href: '/',
-        },
-        {
             name: 'About',
             href: '/about',
             submenu: [
@@ -89,7 +85,7 @@ const Header = () => {
                     <img
                         src={`${import.meta.env.BASE_URL}TSRGlogo.png`}
                         alt="TSRG Logo"
-                        className="h-[50px] md:h-[60px] w-auto object-contain transition-all duration-500 group-hover:scale-105"
+                        className="h-[80px] md:h-[100px] w-auto object-contain transition-all duration-500 group-hover:scale-105"
                     />
                 </Link>
 

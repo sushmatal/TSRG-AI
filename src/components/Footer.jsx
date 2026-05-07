@@ -19,10 +19,10 @@ const Footer = () => {
                     {/* Middle Column: Disclaimers */}
                     <div className="md:col-span-6 text-[10px] md:text-xs text-slate-300 leading-relaxed space-y-4 text-justify md:text-left font-medium">
                         <p>
-                            Disclaimer (Last updated: December 3, 2024) The information contained on the tsrg.org website is for general information purposes only. The Schreiber Research Group does not take a policy position and reserves the right to make additions, deletions, or modifications to the contents at any time without prior notice.
+                            Disclaimer (Last updated: May 1, 2026) The information contained on the tsrg.org website is for general information purposes only. The Schreiber Research Group does not take a policy position and reserves the right to make additions, deletions, or modifications to the contents at any time without prior notice.
                         </p>
                         <p>
-                            Images used under license from Shutterstock.com (Homepage, Blog, Contact Us, Donate, Our Team and Research). Artwork on the Benzodiazepine webpage was created by Akhtar Badshah (Kirkland, WA). The Path Forward logo was designed by Salem Hansen (Aurora, CO, Los Angeles, CA).
+                            Images created using AI tools. (Homepage, About Us, Blog, Contact Us, Donate, Our Team and Research). Artwork on the Benzodiazepine webpage was created by Akhtar Badshah (Kirkland, WA). The Empower Forward logo was designed by Salem Hansen (Aurora, CO, Los Angeles, CA).
                         </p>
                     </div>
 
