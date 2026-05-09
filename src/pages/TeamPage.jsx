@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import PageHero from '../components/PageHero';
-import { Mail, Linkedin, ChevronRight, X, User } from 'lucide-react';
+import { Mail, Linkedin, ChevronRight, X, User, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const TeamMemberCard = ({ member, onClick, delay }) => (
     <motion.div
@@ -16,7 +17,7 @@ const TeamMemberCard = ({ member, onClick, delay }) => (
             <img
                 src={member.image}
                 alt={member.name}
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
+                className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
                 onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1000&auto=format&fit=crop"; }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
@@ -268,7 +269,7 @@ const TeamPage = () => {
             <section className="py-24 bg-slate-50/50">
                 <div className="container mx-auto px-6 max-w-7xl">
                     <div className="text-center mb-20 max-w-3xl mx-auto">
-                        <span className="text-primary font-black tracking-[0.3em] uppercase text-xs mb-4 block">Leadership</span>
+
                         <h2 className="text-4xl font-black text-secondary leading-tight">The Backbone Support Behind Every Initiative</h2>
                     </div>
 
@@ -289,22 +290,18 @@ const TeamPage = () => {
             <section className="py-24 overflow-hidden relative">
                 <div className="absolute inset-0 bg-primary/5 -skew-y-3 origin-right transform scale-110" />
                 <div className="container mx-auto px-6 max-w-7xl relative z-10">
-                    <div className="bg-white rounded-[3rem] p-12 md:p-20 shadow-2xl border border-slate-100 flex flex-col md:flex-row items-center justify-between gap-12">
-                        <div className="max-w-xl text-center md:text-left">
-                            <h2 className="text-3xl md:text-4xl font-black text-secondary mb-6">Want to make an impact?</h2>
-                            <p className="text-slate-500 text-lg leading-relaxed mb-8">
-                                We're always looking for passionate researchers and community advocates to join our growing team. Explore our current opportunities.
+                    <div className="bg-white rounded-[3rem] p-12 md:p-20 shadow-2xl border border-slate-100 flex flex-col items-center text-center max-w-4xl mx-auto">
+                        <div className="w-full">
+                            <h2 className="text-3xl md:text-5xl font-black text-secondary mb-6">Want to make an impact?</h2>
+                            <p className="text-slate-500 text-lg leading-relaxed mb-10 max-w-2xl mx-auto font-medium">
+                                You can support our mission by donating. Your contribution helps us turn data into stories and stories into lasting change.
                             </p>
-                            <button className="bg-accent text-white px-8 py-4 rounded-full font-black uppercase tracking-widest text-xs flex items-center gap-3 hover:-translate-y-1 transition-all shadow-lg hover:shadow-accent/20">
-                                View Openings <ChevronRight size={16} />
-                            </button>
-                        </div>
-                        <div className="flex -space-x-6">
-                            {[1, 2, 3, 4].map(i => (
-                                <div key={i} className="w-16 h-16 md:w-24 md:h-24 rounded-full border-4 border-white overflow-hidden shadow-xl">
-                                    <img src={`https://i.pravatar.cc/150?img=${i + 10}`} alt="Team" className="w-full h-full object-cover" />
-                                </div>
-                            ))}
+                            <Link 
+                                to="/get-involved/donate"
+                                className="inline-flex bg-accent text-white px-12 py-5 rounded-full font-black uppercase tracking-widest text-sm items-center gap-3 hover:-translate-y-1 transition-all shadow-xl hover:shadow-accent/40"
+                            >
+                                Donate Here <Heart size={18} className="fill-white" />
+                            </Link>
                         </div>
                     </div>
                 </div>

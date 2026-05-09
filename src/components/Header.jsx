@@ -8,6 +8,8 @@ const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState(null);
     const [mobileExpanded, setMobileExpanded] = useState({});
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
+    const [searchQuery, setSearchQuery] = useState('');
     const location = useLocation();
 
     useEffect(() => {
@@ -22,6 +24,7 @@ const Header = () => {
     useEffect(() => {
         setIsMobileMenuOpen(false);
         setActiveDropdown(null);
+        setIsSearchOpen(false);
     }, [location]);
 
     const navigation = [
@@ -29,29 +32,14 @@ const Header = () => {
             name: 'About',
             href: '/about',
             submenu: [
-                { name: 'Blog (News & Updates)', href: '/about/blog' },
                 { name: 'Contact', href: '/about/contact' },
                 { name: 'FAQs', href: '/about/faqs' },
                 { name: 'Our Team', href: '/about/team' },
-                { name: 'Partners & Collaborators', href: '/about/partners' },
             ]
         },
         {
-            name: 'Programs & Work',
-            href: '/programs',
-            submenu: [
-                { name: 'Data Dashboard', href: '/programs/dashboard' },
-                { name: 'Gateway to work', href: '/programs/gateway-to-work' },
-                { name: 'Community Outreach', href: '/programs/outreach' },
-                { name: 'Podcasts', href: '/programs/podcasts' },
-                { name: 'PIMS Forms', href: '/programs/pims-forms' },
-                { name: 'Scholarships', href: '/programs/scholarships' },
-                { name: 'Workgroups', href: '/programs/workgroups' },
-            ]
-        },
-        {
-            name: 'Insights',
-            href: '/insights',
+            name: 'Programs', // Explore Our Work
+            href: '/about/explore-our-work',
             submenu: [
                 { 
                     name: 'Research', 
@@ -61,8 +49,27 @@ const Header = () => {
                         { name: 'Opioids', href: '/insights/research/opioids' }
                     ]
                 },
+                { name: 'Community Outreach', href: '/programs/outreach' },
+                { name: 'Data Dashboard', href: '/programs/dashboard' },
+            ]
+        },
+        {
+            name: 'Partner Up',
+            href: '/about/explore-our-work',
+            submenu: [
+                { name: 'Collaboration', href: '/programs/workgroups' },
+                { name: 'Data & Research', href: '/insights/research' },
+                { name: 'Community Engagement', href: '/programs/outreach' },
+                { name: 'Institutional Partnerships', href: '/about/partners' },
+            ]
+        },
+        {
+            name: 'Resources',
+            href: '/insights',
+            submenu: [
+                { name: 'Blogs', href: '/about/blog' },
                 { name: 'Events', href: '/insights/events' },
-                { name: 'Publications', href: '/insights/publications' },
+                { name: 'Podcasts', href: '/programs/podcasts' },
             ]
         }
     ];
@@ -74,10 +81,17 @@ const Header = () => {
         }));
     };
 
+    const handleSearch = (e) => {
+        e.preventDefault();
+        // Implement search logic here or navigate to a search page
+        console.log("Searching for:", searchQuery);
+        setIsSearchOpen(false);
+    };
+
     return (
         <header 
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-                isScrolled ? 'bg-white/90 backdrop-blur-xl shadow-lg py-3' : 'bg-white py-5 border-b border-slate-100'
+                isScrolled ? 'bg-white/95 backdrop-blur-xl shadow-lg py-3' : 'bg-white py-5 border-b border-slate-100'
             }`}
         >
             <div className="container mx-auto px-6 max-w-7xl flex items-center justify-between">
@@ -85,12 +99,12 @@ const Header = () => {
                     <img
                         src={`${import.meta.env.BASE_URL}TSRGlogo.png`}
                         alt="TSRG Logo"
-                        className="h-[80px] md:h-[100px] w-auto object-contain transition-all duration-500 group-hover:scale-105"
+                        className="h-[60px] md:h-[80px] w-auto object-contain transition-all duration-500 group-hover:scale-105"
                     />
                 </Link>
 
                 {/* Desktop Nav */}
-                <nav className="hidden xl:flex items-center gap-8">
+                <nav className="hidden xl:flex items-center gap-6">
                     {navigation.map((item) => (
                         <div 
                             key={item.name} 
@@ -114,7 +128,7 @@ const Header = () => {
                                         initial={{ opacity: 0, y: 10 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         exit={{ opacity: 0, y: 10 }}
-                                        className="absolute top-full -left-4 pt-4 min-w-[240px]"
+                                        className="absolute top-full -left-4 pt-4 min-w-[260px]"
                                     >
                                         <div className="bg-white rounded-2xl shadow-2xl border border-slate-100 p-2">
                                             {item.submenu.map((sub) => (
@@ -152,9 +166,36 @@ const Header = () => {
                     
                     <div className="h-4 w-px bg-slate-200 mx-2" />
                     
-                    <button className="text-slate-400 hover:text-primary transition-colors">
-                        <Search size={18} />
-                    </button>
+                    {/* Search Component */}
+                    <div className="relative flex items-center">
+                        <AnimatePresence>
+                            {isSearchOpen && (
+                                <motion.form 
+                                    initial={{ width: 0, opacity: 0 }}
+                                    animate={{ width: 200, opacity: 1 }}
+                                    exit={{ width: 0, opacity: 0 }}
+                                    onSubmit={handleSearch}
+                                    className="absolute right-10 overflow-hidden"
+                                >
+                                    <input 
+                                        autoFocus
+                                        type="text" 
+                                        placeholder="Search TSRG..."
+                                        value={searchQuery}
+                                        onChange={(e) => setSearchQuery(e.target.value)}
+                                        className="w-full bg-slate-50 border border-slate-100 px-4 py-2 rounded-full text-xs font-bold focus:outline-none focus:ring-2 focus:ring-primary/20"
+                                    />
+                                </motion.form>
+                            )}
+                        </AnimatePresence>
+                        <button 
+                            onClick={() => setIsSearchOpen(!isSearchOpen)}
+                            className="text-slate-400 hover:text-primary transition-colors p-2"
+                        >
+                            {isSearchOpen ? <X size={18} /> : <Search size={18} />}
+                        </button>
+                    </div>
+
                     <Link to="/get-involved/donate" className="bg-primary text-white shadow-primary/20 hover:bg-primary/90 px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-widest transition-all flex items-center gap-2 shadow-lg hover:-translate-y-1">
                         <Heart size={14} className="fill-white text-white" />
                         Donate
@@ -163,7 +204,10 @@ const Header = () => {
 
                 {/* Mobile Toggle */}
                 <div className="flex items-center gap-4 xl:hidden">
-                    <button className="text-slate-400">
+                    <button 
+                        className="text-slate-400"
+                        onClick={() => setIsSearchOpen(!isSearchOpen)}
+                    >
                         <Search size={20} />
                     </button>
                     <button
@@ -185,13 +229,25 @@ const Header = () => {
                         className="xl:hidden bg-white border-t border-slate-100 overflow-hidden shadow-2xl"
                     >
                         <div className="px-6 py-8 flex flex-col gap-2 max-h-[80vh] overflow-y-auto">
+                            {isSearchOpen && (
+                                <form onSubmit={handleSearch} className="mb-6">
+                                    <input 
+                                        type="text" 
+                                        placeholder="Search TSRG..."
+                                        value={searchQuery}
+                                        onChange={(e) => setSearchQuery(e.target.value)}
+                                        className="w-full bg-slate-50 border border-slate-100 px-6 py-4 rounded-2xl text-sm font-bold focus:outline-none focus:ring-2 focus:ring-primary/20"
+                                    />
+                                </form>
+                            )}
+                            
                             {navigation.map((item) => (
                                 <div key={item.name} className="flex flex-col">
                                     <div className="flex items-center justify-between py-3 border-b border-slate-50">
                                         <Link
                                             to={item.href}
                                             className="text-lg font-black text-secondary uppercase tracking-tight"
-                                            onClick={() => setIsMobileMenuOpen(false)}
+                                            onClick={() => !item.submenu && setIsMobileMenuOpen(false)}
                                         >
                                             {item.name}
                                         </Link>

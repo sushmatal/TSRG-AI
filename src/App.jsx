@@ -12,10 +12,11 @@ import ResearchPage from './pages/ResearchPage'
 import ContactPage from './pages/ContactPage'
 import PodcastPage from './pages/PodcastPage'
 import DonatePage from './pages/DonatePage'
+import ExploreOurWorkPage from './pages/ExploreOurWorkPage'
+import PartnersPage from './pages/PartnersPage'
 import { 
   BlogPage,
   FAQsPage,
-  PartnersPage,
   GatewayToWorkPage,
   PIMSFormsPage,
   ScholarshipsPage,
@@ -37,6 +38,7 @@ function App() {
           
           {/* About */}
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/about/explore-our-work" element={<ExploreOurWorkPage />} />
           <Route path="/about/blog" element={<BlogPage />} />
           <Route path="/about/contact" element={<ContactPage />} />
           <Route path="/about/faqs" element={<FAQsPage />} />
