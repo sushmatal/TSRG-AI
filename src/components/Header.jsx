@@ -55,12 +55,11 @@ const Header = () => {
         },
         {
             name: 'Partner Up',
-            href: '/about/explore-our-work',
+            href: '/about/partners',
             submenu: [
                 { name: 'Collaboration', href: '/programs/workgroups' },
                 { name: 'Data & Research', href: '/insights/research' },
                 { name: 'Community Engagement', href: '/programs/outreach' },
-                { name: 'Institutional Partnerships', href: '/about/partners' },
             ]
         },
         {
