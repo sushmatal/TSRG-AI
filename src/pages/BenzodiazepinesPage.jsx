@@ -54,7 +54,7 @@ const BenzodiazepinesPage = () => {
         <div className="min-h-screen bg-white">
             <PageHero 
                 title="Benzodiazepines Research" 
-                backgroundImage={`${import.meta.env.BASE_URL}Header%20Images/Benzos%20Banner.png`}
+                backgroundImage={`${import.meta.env.BASE_URL}Header%20Images/Header.png`}
             />
 
             <section className="py-24 bg-white">

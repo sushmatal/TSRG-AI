@@ -75,7 +75,7 @@ const OutreachPage = () => {
         <div className="min-h-screen bg-white">
             <PageHero 
                 title="Community Outreach" 
-                backgroundImage={`${import.meta.env.BASE_URL}outreach_hero_bg_1778719732003.png`}
+                backgroundImage={`${import.meta.env.BASE_URL}Header%20Images/Header.png`}
             />
 
             {/* How We Serve */}

@@ -78,7 +78,7 @@ const PodcastPage = () => {
             {/* Custom Audio-Themed Hero */}
             <PageHero 
                 title="Official Podcast"
-                backgroundImage={`${import.meta.env.BASE_URL}Header%20Images/Generic%20Banner.png`}
+                backgroundImage={`${import.meta.env.BASE_URL}Header%20Images/Header.png`}
             />
 
             <section className="pt-24 bg-slate-50">

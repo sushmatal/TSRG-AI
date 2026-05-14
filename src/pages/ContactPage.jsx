@@ -30,7 +30,7 @@ const ContactPage = () => {
         <div className="min-h-screen bg-white">
             <PageHero
                 title="Contact Us"
-                backgroundImage={`${import.meta.env.BASE_URL}Header%20Images/Generic%20Banner.png`}
+                backgroundImage={`${import.meta.env.BASE_URL}Header%20Images/Header.png`}
             />
 
             <section className="pt-24 bg-white">

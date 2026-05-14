@@ -237,7 +237,7 @@ const AboutPage = () => {
     <main className="bg-white">
       <PageHero
         title="About TSRG"
-        backgroundImage={`${baseUrl}Header%20Images/Generic%20Banner.png`}
+        backgroundImage={`${baseUrl}Header%20Images/Header.png`}
         imageAlignment="object-center"
       />
 

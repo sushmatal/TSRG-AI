@@ -35,7 +35,7 @@ const DashboardPage = () => {
         <div className="min-h-screen bg-slate-50">
             <PageHero 
                 title="Impact Dashboard" 
-                backgroundImage={`${import.meta.env.BASE_URL}Header%20Images/Generic%20Banner.png`}
+                backgroundImage={`${import.meta.env.BASE_URL}Header%20Images/Header.png`}
             />
 
             <section className="pt-24 bg-slate-50">

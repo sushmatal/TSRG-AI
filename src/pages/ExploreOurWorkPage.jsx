@@ -252,7 +252,7 @@ const ExploreOurWorkPage = () => {
     <main className="bg-white">
       <PageHero
         title="Explore Our Work"
-        backgroundImage={`${baseUrl}Header%20Images/Generic%20Banner.png`}
+        backgroundImage={`${baseUrl}Header%20Images/Header.png`}
         imageAlignment="object-center"
       />
 

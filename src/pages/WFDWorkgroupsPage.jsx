@@ -12,7 +12,7 @@ const WFDWorkgroupsPage = () => {
         <div className="min-h-screen bg-white">
             <PageHero 
                 title="WFD Workgroups" 
-                backgroundImage={`${import.meta.env.BASE_URL}research_hero_bg_1778718936266.png`}
+                backgroundImage={`${import.meta.env.BASE_URL}Header%20Images/Header.png`}
             />
 
             {/* Workforce Development Mission */}

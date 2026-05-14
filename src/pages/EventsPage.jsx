@@ -67,7 +67,7 @@ const EventsPage = () => {
         <div className="min-h-screen bg-white">
             <PageHero 
                 title="Conferences & Events" 
-                backgroundImage={`${import.meta.env.BASE_URL}research_hero_bg_1778718936266.png`}
+                backgroundImage={`${import.meta.env.BASE_URL}Header%20Images/Header.png`}
             />
 
             <section className="py-24 bg-white">

@@ -143,7 +143,7 @@ const PartnersPage = () => {
         <main className="bg-white">
             <PageHero
                 title="Partners & Collaborators"
-                backgroundImage={`${baseUrl}Header%20Images/Generic%20Banner.png`}
+                backgroundImage={`${baseUrl}Header%20Images/Header.png`}
                 imageAlignment="object-center"
             />
 

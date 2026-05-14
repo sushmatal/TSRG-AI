@@ -260,7 +260,7 @@ const TeamPage = () => {
         <div className="min-h-screen bg-slate-50">
             <PageHero
                 title="Our Team"
-                backgroundImage={`${baseUrl}Header%20Images/Generic%20Banner.png`}
+                backgroundImage={`${baseUrl}Header%20Images/Header.png`}
                 imageAlignment="object-top"
             />
 

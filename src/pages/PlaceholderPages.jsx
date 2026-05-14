@@ -5,7 +5,7 @@ const ComingSoon = ({ title, category }) => (
     <div className="min-h-screen bg-white">
         <PageHero 
             title={title} 
-            backgroundImage={`${import.meta.env.BASE_URL}Header%20Images/Generic%20Banner.png`}
+            backgroundImage={`${import.meta.env.BASE_URL}Header%20Images/Header.png`}
         />
         <section className="pt-24 bg-white">
             <div className="container mx-auto px-6 max-w-7xl text-center md:text-left">
