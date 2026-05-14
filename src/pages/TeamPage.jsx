@@ -264,26 +264,21 @@ const TeamPage = () => {
                 imageAlignment="object-top"
             />
 
-            <section className="pt-24 bg-slate-50">
+            <section className="pt-24 pb-12 bg-slate-50">
                 <div className="container mx-auto px-6 max-w-7xl">
                     <motion.p 
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-2xl md:text-3xl font-black text-secondary leading-tight tracking-tight max-w-4xl"
+                        className="text-2xl md:text-4xl font-black text-secondary leading-tight tracking-tight w-full mb-16 text-left"
                     >
-                        A diverse collective of researchers, advocates, and data scientists dedicated to rural resilience.
+                        A diverse collective of researchers, advocates, and data scientists dedicated to rural resilience, providing the backbone support behind every initiative.
                     </motion.p>
                 </div>
             </section>
 
-            <section className="py-24 bg-slate-50/50">
+            <section className="pb-24 bg-slate-50">
                 <div className="container mx-auto px-6 max-w-7xl">
-                    <div className="text-center mb-20 max-w-3xl mx-auto">
-
-                        <h2 className="text-4xl font-black text-secondary leading-tight">The Backbone Support Behind Every Initiative</h2>
-                    </div>
-
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         {sortedTeam.map((member, i) => (
                             <TeamMemberCard

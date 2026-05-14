@@ -139,40 +139,21 @@ const ContactPage = () => {
             {/* Map Section */}
             <section className="py-24 bg-slate-50 relative overflow-hidden">
                 <div className="container mx-auto px-6 max-w-7xl relative z-10">
-                    <div className="bg-white rounded-[4rem] overflow-hidden shadow-2xl border border-slate-100 flex flex-col lg:flex-row">
-                        <div className="w-full lg:w-1/2 h-[400px] lg:h-auto relative">
+                    <div className="bg-white rounded-[4rem] overflow-hidden shadow-2xl border border-slate-100 flex flex-col">
+                        <div className="w-full relative flex">
                              <img 
-                                src="https://images.unsplash.com/photo-1544198365-f5d60b6d8190?q=80&w=2000&auto=format&fit=crop" 
-                                className="w-full h-full object-cover" 
-                                alt="Colorado Landscape"
+                                src={`${import.meta.env.BASE_URL}Contact/Screenshot%202026-05-13%20181328.jpg`} 
+                                className="w-full h-auto object-contain" 
+                                alt="Contact Section Image"
                              />
-                             <div className="absolute inset-0 bg-primary/20 backdrop-blur-[2px]" />
-                             <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="bg-white/90 backdrop-blur-md px-10 py-6 rounded-3xl shadow-2xl text-center">
-                                    <div className="w-4 h-4 bg-accent rounded-full animate-ping mx-auto mb-4" />
+                             <div className="absolute inset-0 bg-primary/10 backdrop-blur-[1px]" />
+                             <div className="absolute inset-0 p-8 md:p-16 lg:p-24 flex items-start justify-start">
+                                <div className="bg-white/90 backdrop-blur-md px-8 py-6 rounded-3xl shadow-2xl text-left inline-block">
+                                    <div className="w-4 h-4 bg-accent rounded-full animate-ping mb-4" />
                                     <h3 className="text-2xl font-black text-secondary">Colorado</h3>
                                     <p className="text-xs font-bold text-primary uppercase tracking-[0.2em]">Primary Service Region</p>
                                 </div>
                              </div>
-                        </div>
-                        <div className="w-full lg:w-1/2 p-12 md:p-20 flex flex-col justify-center">
-
-                            <h2 className="text-3xl md:text-4xl font-black text-secondary mb-8 tracking-tight">Active In Communities <br />Across Colorado.</h2>
-                            <div className="grid grid-cols-2 gap-6">
-                                {[
-                                    { county: "Otero", region: "Southeast" },
-                                    { county: "Crowley", region: "Southeast" },
-                                    { county: "Bent", region: "Southeast" },
-                                    { county: "Las Animas", region: "South" },
-                                    { county: "Denver", region: "Central" },
-                                    { county: "San Luis Valley", region: "Southwest" }
-                                ].map((item, i) => (
-                                    <div key={i} className="flex flex-col p-4 bg-slate-50 rounded-2xl border border-slate-100 group hover:border-primary/20 transition-all">
-                                        <span className="text-lg font-black text-secondary group-hover:text-primary">{item.county}</span>
-                                        <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">{item.region}</span>
-                                    </div>
-                                ))}
-                            </div>
                         </div>
                     </div>
                 </div>
