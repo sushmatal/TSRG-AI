@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-    Users, Briefcase, GraduationCap, Video, 
+import {
+    Users, Briefcase, GraduationCap, Video,
     Mail, Calendar, ArrowRight, ShieldCheck,
     Users2, Laptop, Network, Target
 } from 'lucide-react';
@@ -10,8 +10,8 @@ import PageHero from '../components/PageHero';
 const WFDWorkgroupsPage = () => {
     return (
         <div className="min-h-screen bg-white">
-            <PageHero 
-                title="WFD Workgroups" 
+            <PageHero
+                title="WFD Workgroups"
                 backgroundImage={`${import.meta.env.BASE_URL}Header%20Images/Header.png`}
             />
 
@@ -85,12 +85,12 @@ const WFDWorkgroupsPage = () => {
                 <div className="container mx-auto px-6 max-w-7xl">
                     <div className="bg-secondary rounded-[4rem] p-12 md:p-20 relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-96 h-96 bg-turkish-tile/10 rounded-full blur-3xl -mr-48 -mt-48" />
-                        
+
                         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
                             <div>
                                 <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-8">
                                     Opioid Response <br />
-                                    <span className="text-turkish-tile italic">Task Force Groups</span>
+                                    <span className="text-turkish-tile italic">Task Force Group</span>
                                 </h2>
                                 <p className="text-slate-300 text-lg font-medium leading-relaxed mb-10">
                                     Community-led workgroups addressing Southeastern Colorado's opioid response through multi-sectoral and cross-organizational collaboration.
@@ -98,80 +98,80 @@ const WFDWorkgroupsPage = () => {
                                 <div className="flex items-center gap-4 p-6 bg-white/5 rounded-3xl border border-white/10">
                                     <ShieldCheck className="text-turkish-tile" size={32} />
                                     <p className="text-white font-bold text-sm">
-                                        TSRG provides administrative and facilitation support for all task force meetings.
+                                        TSRG provides administrative and facilitation support for the workgroup with support from AmeriCorps.
                                     </p>
                                 </div>
                             </div>
 
-                            <div className="space-y-6">
-                                <h3 className="text-xs font-black uppercase tracking-[0.3em] text-white/40 mb-4">Leadership & Support</h3>
-                                
-                                {/* Community Leader */}
-                                <div className="bg-white/5 p-8 rounded-[2.5rem] border border-white/10 flex items-center justify-between group hover:bg-white/10 transition-all">
+                        <div className="space-y-6">
+                            <h3 className="text-xs font-black uppercase tracking-[0.3em] text-white/40 mb-4">Leadership & Support</h3>
+
+                            {/* Community Leader */}
+                            <div className="bg-white/5 p-8 rounded-[2.5rem] border border-white/10 flex items-center justify-between group hover:bg-white/10 transition-all">
+                                <div>
+                                    <p className="text-[10px] font-black uppercase tracking-widest text-turkish-tile mb-2">Community Leader</p>
+                                    <h4 className="text-white font-black text-xl mb-1">Donna Rohde</h4>
+                                    <p className="text-slate-400 text-sm">Huerfano County Public Health</p>
+                                </div>
+                                <a href="mailto:tarac@mhyc.net" className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-white hover:bg-turkish-tile transition-colors">
+                                    <Mail size={20} />
+                                </a>
+                            </div>
+
+                            {/* TSRG Support */}
+                            <div className="bg-white/5 p-8 rounded-[2.5rem] border border-white/10 flex flex-col gap-6">
+                                <p className="text-[10px] font-black uppercase tracking-widest text-persimmon">TSRG Support Contact</p>
+                                <div className="flex items-center justify-between">
                                     <div>
-                                        <p className="text-[10px] font-black uppercase tracking-widest text-turkish-tile mb-2">Community Leader</p>
-                                        <h4 className="text-white font-black text-xl mb-1">Tara Castaneda</h4>
-                                        <p className="text-slate-400 text-sm">Mile High Youth Corps (MHYC)</p>
+                                        <h4 className="text-white font-black text-lg">Tori Hodkin</h4>
+                                        <p className="text-slate-400 text-xs">tori@tsrg.org</p>
                                     </div>
-                                    <a href="mailto:tarac@mhyc.net" className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-white hover:bg-turkish-tile transition-colors">
-                                        <Mail size={20} />
+                                    <a href="mailto:tori@tsrg.org" className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center text-white hover:bg-persimmon transition-colors">
+                                        <Mail size={18} />
                                     </a>
                                 </div>
-
-                                {/* TSRG Support */}
-                                <div className="bg-white/5 p-8 rounded-[2.5rem] border border-white/10 flex flex-col gap-6">
-                                    <p className="text-[10px] font-black uppercase tracking-widest text-persimmon">TSRG Support Contact</p>
-                                    <div className="flex items-center justify-between">
-                                        <div>
-                                            <h4 className="text-white font-black text-lg">Maddie Peloff</h4>
-                                            <p className="text-slate-400 text-xs">maddie@tsrg.org</p>
-                                        </div>
-                                        <a href="mailto:maddie@tsrg.org" className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center text-white hover:bg-persimmon transition-colors">
-                                            <Mail size={18} />
-                                        </a>
+                                <div className="flex items-center justify-between">
+                                    <div>
+                                        <h4 className="text-white font-black text-lg">Terri Schreiber</h4>
+                                        <p className="text-slate-400 text-xs">terri@tsrg.org</p>
                                     </div>
-                                    <div className="flex items-center justify-between">
-                                        <div>
-                                            <h4 className="text-white font-black text-lg">Terri Schreiber</h4>
-                                            <p className="text-slate-400 text-xs">terri@tsrg.org</p>
-                                        </div>
-                                        <a href="mailto:terri@tsrg.org" className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center text-white hover:bg-persimmon transition-colors">
-                                            <Mail size={18} />
-                                        </a>
-                                    </div>
+                                    <a href="mailto:terri@tsrg.org" className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center text-white hover:bg-persimmon transition-colors">
+                                        <Mail size={18} />
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+        </div>
+            </section >
 
-            {/* Meeting Schedule */}
-            <section className="py-24 bg-white">
-                <div className="container mx-auto px-6 max-w-7xl">
-                    <div className="bg-jungle-jade/5 p-12 md:p-24 rounded-[4rem] border border-jungle-jade/10 text-center">
-                        <div className="w-16 h-16 bg-jungle-jade/10 rounded-2xl flex items-center justify-center text-jungle-jade mx-auto mb-10">
-                            <Calendar size={32} />
-                        </div>
-                        <h2 className="text-3xl md:text-5xl font-black text-secondary tracking-tight mb-8">Join Our Monthly Meeting</h2>
-                        <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
-                            <div className="flex items-center gap-4">
-                                <Calendar className="text-jungle-jade" />
-                                <span className="text-xl font-bold text-secondary">Third Monday of every month</span>
-                            </div>
-                            <div className="h-2 w-2 rounded-full bg-slate-200 hidden md:block" />
-                            <div className="flex items-center gap-4">
-                                <Video className="text-jungle-jade" />
-                                <span className="text-xl font-bold text-secondary">12:00 PM - 1:00 PM (Zoom)</span>
-                            </div>
-                        </div>
-                        <button className="bg-secondary text-white px-12 py-6 rounded-full font-black uppercase tracking-widest text-sm hover:bg-turkish-tile transition-all flex items-center justify-center gap-3 mx-auto shadow-2xl shadow-secondary/20">
-                            Get Meeting Link <ArrowRight size={20} />
-                        </button>
+    {/* Meeting Schedule */ }
+    < section className = "py-24 bg-white" >
+        <div className="container mx-auto px-6 max-w-7xl">
+            <div className="bg-jungle-jade/5 p-12 md:p-24 rounded-[4rem] border border-jungle-jade/10 text-center">
+                <div className="w-16 h-16 bg-jungle-jade/10 rounded-2xl flex items-center justify-center text-jungle-jade mx-auto mb-10">
+                    <Calendar size={32} />
+                </div>
+                <h2 className="text-3xl md:text-5xl font-black text-secondary tracking-tight mb-8">Join Our Monthly Meeting</h2>
+                <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
+                    <div className="flex items-center gap-4">
+                        <Calendar className="text-jungle-jade" />
+                        <span className="text-xl font-bold text-secondary">Third Monday of every month</span>
+                    </div>
+                    <div className="h-2 w-2 rounded-full bg-slate-200 hidden md:block" />
+                    <div className="flex items-center gap-4">
+                        <Video className="text-jungle-jade" />
+                        <span className="text-xl font-bold text-secondary">12:00 PM - 1:00 PM (Zoom)</span>
                     </div>
                 </div>
-            </section>
+                <button className="bg-secondary text-white px-12 py-6 rounded-full font-black uppercase tracking-widest text-sm hover:bg-turkish-tile transition-all flex items-center justify-center gap-3 mx-auto shadow-2xl shadow-secondary/20">
+                    Get Meeting Link <ArrowRight size={20} />
+                </button>
+            </div>
         </div>
+            </section >
+        </div >
     );
 };
 
