@@ -38,7 +38,7 @@ const TestimonialsSection = () => {
         <section id="testimonials" className="py-24 bg-white relative">
             <div className="container mx-auto px-6 max-w-7xl">
                 <div className="max-w-3xl mx-auto text-center mb-16">
-                    <span className="text-primary font-black tracking-[0.3em] uppercase text-xs mb-4 block">Testimonials</span>
+
                     <h2 className="text-4xl md:text-5xl font-black text-secondary tracking-tight">What Our Partners Say</h2>
                 </div>
 
@@ -96,7 +96,7 @@ const PartnersSection = () => {
         <section id="partners" className="py-24 bg-slate-50 relative overflow-hidden">
             <div className="container mx-auto px-6 max-w-7xl">
                 <div className="text-center mb-16">
-                    <span className="text-primary font-black tracking-[0.3em] uppercase text-xs mb-4 block">Our Network</span>
+
                     <h2 className="text-4xl md:text-5xl font-black text-secondary tracking-tight mb-6">Our Supporters & Partners</h2>
                     <p className="text-xl text-slate-600 leading-relaxed mb-8 font-medium max-w-3xl mx-auto">
                         TSRG works with local, regional and federal organizations to find solutions to the opioid and benzodiazepine crises. Through a collaborative, concerted effort, TSRG can grow and continue to aim to find solutions.
@@ -140,14 +140,28 @@ const PartnersPage = () => {
     const baseUrl = import.meta.env.BASE_URL;
 
     return (
-        <main className="bg-white pt-20">
+        <main className="bg-white">
             <PageHero
                 title="Partners & Collaborators"
-                subtitle="Building stronger communities through collaborative research and shared data solutions."
-                breadcrumbs={[{ name: 'About', href: '/about' }]}
                 backgroundImage={`${baseUrl}Header%20Images/Generic%20Banner.png`}
                 imageAlignment="object-center"
             />
+
+            {/* Intro Subtitle Section */}
+            <section className="pt-24 bg-white">
+                <div className="container mx-auto px-6 max-w-7xl">
+                    <motion.p 
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-2xl md:text-3xl font-black text-secondary leading-tight tracking-tight max-w-4xl"
+                    >
+                        Building stronger communities through collaborative research and shared data solutions.
+                    </motion.p>
+                    <div className="w-20 h-1 bg-primary mt-8" />
+                </div>
+            </section>
+
             <PartnersSection />
             <TestimonialsSection />
         </main>

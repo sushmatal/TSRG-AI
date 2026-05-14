@@ -14,18 +14,18 @@ import PodcastPage from './pages/PodcastPage'
 import DonatePage from './pages/DonatePage'
 import ExploreOurWorkPage from './pages/ExploreOurWorkPage'
 import PartnersPage from './pages/PartnersPage'
+import EventsPage from './pages/EventsPage'
+import BenzodiazepinesPage from './pages/BenzodiazepinesPage'
+import OpioidsPage from './pages/OpioidsPage'
+import OutreachPage from './pages/OutreachPage'
+import WFDWorkgroupsPage from './pages/WFDWorkgroupsPage'
 import { 
   BlogPage,
   FAQsPage,
   GatewayToWorkPage,
   PIMSFormsPage,
   ScholarshipsPage,
-  WorkgroupsPage,
-  OutreachPage,
-  EventsPage,
-  PublicationsPage,
-  BenzodiazepinesPage,
-  OpioidsPage
+  PublicationsPage
 } from './pages/PlaceholderPages'
 
 function App() {
@@ -53,7 +53,7 @@ function App() {
           <Route path="/programs/podcasts" element={<PodcastPage />} />
           <Route path="/programs/pims-forms" element={<PIMSFormsPage />} />
           <Route path="/programs/scholarships" element={<ScholarshipsPage />} />
-          <Route path="/programs/workgroups" element={<WorkgroupsPage />} />
+          <Route path="/programs/workgroups" element={<WFDWorkgroupsPage />} />
           
           {/* Insights */}
           <Route path="/insights" element={<InsightsPage />} />

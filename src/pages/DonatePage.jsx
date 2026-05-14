@@ -38,10 +38,21 @@ const DonatePage = () => {
         <div className="min-h-screen bg-slate-50 pb-24">
             <PageHero 
                 title="Support Our Mission" 
-                subtitle="Your donation will support our internship program, our research, and contribute to our operating budget. For every dollar you contribute, we are one step closer to finding wide-ranging solutions to the opioid epidemic."
-                breadcrumbs={[{ name: 'Donate', href: '#' }]}
                 backgroundImage={`${import.meta.env.BASE_URL}Header%20Images/Generic%20Banner.png`}
             />
+
+            <section className="pt-24 bg-slate-50">
+                <div className="container mx-auto px-6 max-w-7xl">
+                    <motion.p 
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-2xl md:text-3xl font-black text-secondary leading-tight tracking-tight max-w-4xl"
+                    >
+                        Your donation will support our internship program, our research, and contribute to our operating budget. For every dollar you contribute, we are one step closer to finding wide-ranging solutions to the opioid epidemic.
+                    </motion.p>
+                </div>
+            </section>
 
             {/* Digital Donation Platforms */}
             <section className="py-24 -mt-10 relative z-20">

@@ -11,11 +11,11 @@ import PageHero from '../components/PageHero';
 ───────────────────────────────────────────── */
 const ExploreOurWork = () => {
   const focusAreas = [
-    { title: "Opioids", icon: <Activity />, color: "from-[#3F65A5] to-[#2A436E]", desc: "Crisis response & harm reduction" },
-    { title: "Benzodiazepines", icon: <ShieldPlus />, color: "from-[#1D7B72] to-[#14564F]", desc: "Risk mitigation & clinical oversight" },
-    { title: "Alcohol", icon: <Wine />, color: "from-amber-500 to-amber-700", desc: "Community prevention systems" },
-    { title: "Marijuana", icon: <Leaf />, color: "from-emerald-500 to-emerald-700", desc: "Policy impact & health analysis" },
-    { title: "Vaping", icon: <Wind />, color: "from-cyan-500 to-cyan-700", desc: "Youth prevention & outreach" }
+    { title: "Opioids", icon: <Activity />, color: "from-turkish-tile to-[#2A5161]", desc: "Crisis response & harm reduction" },
+    { title: "Benzodiazepines", icon: <ShieldPlus />, color: "from-jungle-jade to-[#4D8F87]", desc: "Risk mitigation & clinical oversight" },
+    { title: "Alcohol", icon: <Wine />, color: "from-persimmon to-[#D16A54]", desc: "Community prevention systems" },
+    { title: "Marijuana", icon: <Leaf />, color: "from-catawba to-[#3D6361]", desc: "Policy impact & health analysis" },
+    { title: "Vaping", icon: <Wind />, color: "from-lupine to-[#5A6D8C]", desc: "Youth prevention & outreach" }
   ];
 
   return (
@@ -34,7 +34,7 @@ const ExploreOurWork = () => {
             transition={{ duration: 0.8 }}
             className="lg:col-span-7"
           >
-            <span className="text-primary font-black tracking-[0.4em] uppercase text-xs mb-6 block">Domain Expertise</span>
+
             <h2 className="text-5xl md:text-6xl font-black text-secondary mb-8 leading-[1.1] tracking-tight">
               Data Solutions for <br />
               <span className="text-primary italic">Resilient Communities.</span>
@@ -140,7 +140,7 @@ const Services = () => {
 
       <div className="container mx-auto px-6 relative z-10 max-w-7xl">
         <div className="max-w-4xl mx-auto text-center mb-20">
-          <span className="text-accent font-black tracking-[0.4em] uppercase text-xs mb-6 block">Our Backbone Services</span>
+
           <h2 className="text-4xl md:text-6xl font-black text-white tracking-tight leading-[1.05] mb-8">
             Identify <span className="text-accent italic">Gaps</span> to Improve <span className="text-accent">Outcomes.</span>
           </h2>
@@ -199,7 +199,7 @@ const HowWeWork = () => {
     <section className="py-24 bg-white relative overflow-hidden">
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
         <div className="text-center mb-20">
-          <span className="text-primary font-black tracking-[0.4em] uppercase text-xs mb-6 block">The TSRG Path</span>
+
           <h2 className="text-4xl md:text-5xl font-black text-secondary tracking-tight">Turning Evidence into Results.</h2>
         </div>
 
@@ -249,13 +249,28 @@ const ExploreOurWorkPage = () => {
   const baseUrl = import.meta.env.BASE_URL;
 
   return (
-    <main className="bg-white pt-20">
+    <main className="bg-white">
       <PageHero
         title="Explore Our Work"
-        subtitle="Turning data into solutions for resilient communities through rigorous research and collaborative action."
         backgroundImage={`${baseUrl}Header%20Images/Generic%20Banner.png`}
         imageAlignment="object-center"
       />
+
+      {/* Intro Subtitle Section */}
+      <section className="pt-24 bg-white">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-2xl md:text-4xl font-black text-secondary leading-tight tracking-tight max-w-4xl"
+          >
+            Turning data into solutions for resilient communities through rigorous research and collaborative action.
+          </motion.p>
+          <div className="w-20 h-1 bg-primary mt-8" />
+        </div>
+      </section>
+
       <ExploreOurWork />
       <Services />
       <HowWeWork />

@@ -35,17 +35,26 @@ const DashboardPage = () => {
         <div className="min-h-screen bg-slate-50">
             <PageHero 
                 title="Impact Dashboard" 
-                subtitle="Real-time transparency into our community outreach, clinical resources, and harm reduction metrics."
-                breadcrumbs={[{ name: 'Programs', href: '/programs' }]}
                 backgroundImage={`${import.meta.env.BASE_URL}Header%20Images/Generic%20Banner.png`}
             />
+
+            <section className="pt-24 bg-slate-50">
+                <div className="container mx-auto px-6 max-w-7xl">
+                    <motion.p 
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-2xl md:text-3xl font-black text-secondary leading-tight tracking-tight max-w-4xl"
+                    >
+                        Real-time transparency into our community outreach, clinical resources, and harm reduction metrics.
+                    </motion.p>
+                </div>
+            </section>
 
             {/* Toolbar */}
             <section className="sticky top-24 z-40 bg-white/80 backdrop-blur-md border-b border-slate-100 py-4">
                 <div className="container mx-auto px-6 max-w-7xl flex flex-wrap items-center justify-between gap-4">
                     <div className="flex items-center gap-4 text-xs font-black uppercase tracking-widest text-slate-500">
-                        <Filter size={16} />
-                        <span>Filter By:</span>
                         <select className="bg-slate-100 border-none rounded-full px-4 py-2 cursor-pointer focus:ring-2 ring-primary transition-all">
                             <option>All Regions</option>
                             <option>Northern Rural</option>

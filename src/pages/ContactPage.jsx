@@ -30,10 +30,21 @@ const ContactPage = () => {
         <div className="min-h-screen bg-white">
             <PageHero
                 title="Contact Us"
-                subtitle="Have a question about our research or want to partner with us? Reach out and start the conversation."
-                breadcrumbs={[{ name: 'Connect', href: '#' }]}
                 backgroundImage={`${import.meta.env.BASE_URL}Header%20Images/Generic%20Banner.png`}
             />
+
+            <section className="pt-24 bg-white">
+                <div className="container mx-auto px-6 max-w-7xl">
+                    <motion.p 
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-2xl md:text-3xl font-black text-secondary leading-tight tracking-tight max-w-4xl"
+                    >
+                        Have a question about our research or want to partner with us? Reach out and start the conversation.
+                    </motion.p>
+                </div>
+            </section>
 
             <section className="py-24 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-1/3 h-full bg-slate-50 -skew-x-12 transform translate-x-1/2" />
@@ -81,7 +92,7 @@ const ContactPage = () => {
                         {/* Info Column */}
                         <div className="flex flex-col gap-8 justify-center">
                             <div className="mb-12">
-                                <span className="text-primary font-black tracking-[0.3em] uppercase text-xs mb-4 block">Get in Touch</span>
+
                                 <h2 className="text-4xl md:text-5xl font-black text-secondary leading-tight mb-6">Let's connect <br />with our team.</h2>
                                 <p className="text-slate-500 text-lg leading-relaxed max-w-md">
                                     TSRG operates as a backbone partner, and we're always looking for new collaborators to strengthen the network.
@@ -145,7 +156,7 @@ const ContactPage = () => {
                              </div>
                         </div>
                         <div className="w-full lg:w-1/2 p-12 md:p-20 flex flex-col justify-center">
-                            <span className="text-accent font-black tracking-[0.3em] uppercase text-xs mb-4 block">Our Reach</span>
+
                             <h2 className="text-3xl md:text-4xl font-black text-secondary mb-8 tracking-tight">Active In Communities <br />Across Colorado.</h2>
                             <div className="grid grid-cols-2 gap-6">
                                 {[

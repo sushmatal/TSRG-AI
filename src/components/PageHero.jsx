@@ -1,11 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
-const PageHero = ({ title, subtitle, breadcrumbs = [], backgroundImage, imageAlignment = 'object-center' }) => {
+const PageHero = ({ title, backgroundImage, imageAlignment = 'object-center' }) => {
     return (
-        <section className="relative pt-32 pb-20 overflow-hidden bg-slate-900 border-b border-white/5">
+        <section className="relative pt-48 pb-32 overflow-hidden bg-slate-900 border-b border-white/5">
             {/* Background Image Overlay */}
             {backgroundImage && (
                 <div className="absolute inset-0 z-0">
@@ -25,39 +23,14 @@ const PageHero = ({ title, subtitle, breadcrumbs = [], backgroundImage, imageAli
             </div>
 
             <div className="container mx-auto px-6 max-w-7xl relative z-10">
-                {/* Breadcrumbs */}
-                <nav className="flex items-center gap-2 mb-8 text-slate-400 text-xs font-bold uppercase tracking-widest">
-                    <Link to="/" className="hover:text-white transition-colors">Home</Link>
-                    {breadcrumbs.map((crumb, i) => (
-                        <React.Fragment key={i}>
-                            <ChevronRight size={12} className="text-slate-600" />
-                            <Link to={crumb.href} className="hover:text-white transition-colors">
-                                {crumb.name}
-                            </Link>
-                        </React.Fragment>
-                    ))}
-                    <ChevronRight size={12} className="text-slate-600" />
-                    <span className="text-accent">{title}</span>
-                </nav>
-
                 <div className="max-w-4xl">
                     <motion.h1 
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight tracking-tight"
+                        className="text-5xl md:text-7xl font-black text-white leading-tight tracking-tight"
                     >
                         {title}
                     </motion.h1>
-                    {subtitle && (
-                        <motion.p 
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.1 }}
-                            className="text-xl md:text-2xl text-slate-400 leading-relaxed font-medium max-w-2xl"
-                        >
-                            {subtitle}
-                        </motion.p>
-                    )}
                 </div>
             </div>
             

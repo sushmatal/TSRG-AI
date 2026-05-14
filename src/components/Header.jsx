@@ -57,7 +57,7 @@ const Header = () => {
             name: 'Partner Up',
             href: '/about/partners',
             submenu: [
-                { name: 'Collaboration', href: '/programs/workgroups' },
+                { name: 'WFD Workgroup', href: '/programs/workgroups' },
                 { name: 'Data & Research', href: '/insights/research' },
                 { name: 'Community Engagement', href: '/programs/outreach' },
             ]

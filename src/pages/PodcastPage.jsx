@@ -78,9 +78,21 @@ const PodcastPage = () => {
             {/* Custom Audio-Themed Hero */}
             <PageHero 
                 title="Official Podcast"
-                subtitle="A Path Forward is a podcast that discusses the substance use crisis and the work being conducted in Otero, Crowley, Bent and Conejos counties."
                 backgroundImage={`${import.meta.env.BASE_URL}Header%20Images/Generic%20Banner.png`}
             />
+
+            <section className="pt-24 bg-slate-50">
+                <div className="container mx-auto px-6 max-w-5xl">
+                    <motion.p 
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-2xl md:text-3xl font-black text-secondary leading-tight tracking-tight"
+                    >
+                        A Path Forward is a podcast that discusses the substance use crisis and the work being conducted in Otero, Crowley, Bent and Conejos counties.
+                    </motion.p>
+                </div>
+            </section>
 
             {/* Recent Episodes */}
             <section className="py-24 relative">

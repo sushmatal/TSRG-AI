@@ -31,7 +31,7 @@ const Footer = () => {
                         <h4 className="text-lg font-bold text-white mb-2">Contact Us</h4>
                         <p>Phone: +1 720-234-8191</p>
                         <p>
-                            Email: <a href="mailto:terri@tsrg.org" className="hover:text-primary transition-colors hover:underline">terri@tsrg.org</a>
+                            Email: <a href="mailto:info@tsrg.org" className="hover:text-primary transition-colors hover:underline">info@tsrg.org</a>
                         </p>
                         <p>P.O. Box 371342</p>
                         <p>Denver, CO 80237</p>

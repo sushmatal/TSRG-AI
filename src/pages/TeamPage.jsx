@@ -260,11 +260,22 @@ const TeamPage = () => {
         <div className="min-h-screen bg-slate-50">
             <PageHero
                 title="Our Team"
-                subtitle="A diverse collective of researchers, advocates, and data scientists dedicated to rural resilience."
-                breadcrumbs={[{ name: 'About', href: '/about' }]}
                 backgroundImage={`${baseUrl}Header%20Images/Generic%20Banner.png`}
                 imageAlignment="object-top"
             />
+
+            <section className="pt-24 bg-slate-50">
+                <div className="container mx-auto px-6 max-w-7xl">
+                    <motion.p 
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-2xl md:text-3xl font-black text-secondary leading-tight tracking-tight max-w-4xl"
+                    >
+                        A diverse collective of researchers, advocates, and data scientists dedicated to rural resilience.
+                    </motion.p>
+                </div>
+            </section>
 
             <section className="py-24 bg-slate-50/50">
                 <div className="container mx-auto px-6 max-w-7xl">

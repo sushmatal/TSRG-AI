@@ -32,8 +32,8 @@ const Hero = () => {
 
 
                     <h1 className="text-3xl md:text-5xl lg:text-5xl font-black text-white leading-[1.1] mb-8 tracking-tight drop-shadow-lg uppercase max-w-5xl mx-auto">
-                        Turning <span className="italic">Data</span> into Stories, <br className="hidden md:block" />
-                        Stories into <span className="italic">Change</span>.
+                        Turning <span className="italic text-persimmon">Data</span> into Stories, <br className="hidden md:block" />
+                        Stories into <span className="italic text-apricot">Change</span>.
                     </h1>
 
                     <p className="text-base md:text-lg lg:text-xl text-white mb-10 leading-relaxed max-w-2xl mx-auto font-medium drop-shadow-md">
@@ -56,7 +56,7 @@ const Hero = () => {
                         transition={{ delay: 1, duration: 1 }}
                         className="flex flex-col items-center gap-2 text-white/60"
                     >
-                        <span className="text-[10px] font-black uppercase tracking-[0.5em]">Scroll to Discover</span>
+
                         <motion.div
                             animate={{ y: [0, 8, 0] }}
                             transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
@@ -74,58 +74,74 @@ const Hero = () => {
    2. STORY SECTION
 ───────────────────────────────────────────── */
 const StorySection = () => {
-    const sections = [
-        {
-            title: "Our Mission",
-            icon: <Target className="text-primary" size={24} />,
-            content: "TSRG partners with rural and urban communities to transform local data into real-world solutions. We provide consulting services, research, program development, and leadership to build stronger, collaborative solutions and improve outcomes."
-        },
-        {
-            title: "Our Vision",
-            icon: <Eye className="text-primary" size={24} />,
-            content: "We believe building healthy rural and urban communities starts with listening. We lead projects or partner with community coalitions to find solutions to community challenges and then bring partners together to turn knowledge into lasting change."
-        },
-        {
-            title: "Our Purpose",
-            icon: <Heart className="text-primary" size={24} />,
-            content: "TSRG serves as a trusted backbone for rural and urban prevention and workforce development services, helping communities turn ideas into a clear path forward by blending data with local wisdom."
-        }
-    ];
-
     const values = [
-        { letter: "T", title: "Trust", description: "Building long-term, ethical relationships with rural leaders and families.", icon: <ShieldCheck size={20} /> },
-        { letter: "S", title: "Service", description: "Delivering actionable insights that solve immediate community needs efficiently.", icon: <Activity size={20} /> },
-        { letter: "R", title: "Research", description: "Providing evidence-based methodologies and rigorous evaluation to inform local solutions.", icon: <SearchCheck size={20} /> },
-        { letter: "G", title: "Guidance", description: "Navigating complex systems to lead sustainable long-term success.", icon: <Settings size={20} /> }
+        { letter: "T", title: "Trust", description: "Building long-term, ethical relationships with rural leaders and families.", icon: <ShieldCheck size={20} />, color: "text-lupine", bg: "bg-lupine" },
+        { letter: "S", title: "Service", description: "Delivering actionable insights that solve immediate community needs efficiently.", icon: <Activity size={20} />, color: "text-catawba", bg: "bg-catawba" },
+        { letter: "R", title: "Research", description: "Providing evidence-based methodologies and rigorous evaluation to inform local solutions.", icon: <SearchCheck size={20} />, color: "text-turkish-tile", bg: "bg-turkish-tile" },
+        { letter: "G", title: "Guidance", description: "Navigating complex systems to lead sustainable long-term success.", icon: <Settings size={20} />, color: "text-persimmon", bg: "bg-persimmon" }
     ];
 
     return (
-        <section id="about" className="py-16 bg-slate-50">
-            <div className="container mx-auto px-6 max-w-7xl">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-                    {sections.map((section, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, scale: 0.98 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col"
-                        >
-                            <div className="flex items-center gap-4 mb-4">
-                                <div className="w-10 h-10 bg-primary/5 rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                                    {section.icon}
+        <section id="about" className="py-24 bg-white relative overflow-hidden">
+            <div className="container mx-auto px-6 max-w-7xl relative z-10">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-jungle-jade/10 text-jungle-jade font-black text-[10px] uppercase tracking-widest mb-8">
+                            <Target size={14} /> Our Core Mission
+                        </div>
+                        <h2 className="text-4xl md:text-6xl font-black text-secondary mb-10 leading-[1.1] tracking-tight">
+                            Transforming <span className="text-jungle-jade italic">Local Data</span> into Real-World <span className="text-turkish-tile">Solutions.</span>
+                        </h2>
+                        
+                        <div className="space-y-8 text-slate-600 text-lg md:text-xl leading-relaxed font-medium">
+                            <p className="text-secondary text-2xl font-bold leading-snug">
+                                TSRG partners with rural and urban communities to bridge the gap between information and action.
+                            </p>
+                            <p>
+                                We provide consulting services, research, program development, and leadership to build stronger, collaborative solutions and improve outcomes across the public health landscape.
+                            </p>
+                            <div className="pt-8 border-t border-slate-100 flex flex-wrap gap-4">
+                                <div className="flex items-center gap-2 bg-slate-50 px-5 py-3 rounded-2xl border border-slate-100 shadow-sm">
+                                    <div className="w-2 h-2 rounded-full bg-jungle-jade" />
+                                    <span className="text-xs font-black uppercase tracking-widest text-slate-500">Consulting</span>
                                 </div>
-                                <h4 className="text-xl font-black text-secondary uppercase tracking-tight">{section.title}</h4>
+                                <div className="flex items-center gap-2 bg-slate-50 px-5 py-3 rounded-2xl border border-slate-100 shadow-sm">
+                                    <div className="w-2 h-2 rounded-full bg-turkish-tile" />
+                                    <span className="text-xs font-black uppercase tracking-widest text-slate-500">Research</span>
+                                </div>
+                                <div className="flex items-center gap-2 bg-slate-50 px-5 py-3 rounded-2xl border border-slate-100 shadow-sm">
+                                    <div className="w-2 h-2 rounded-full bg-persimmon" />
+                                    <span className="text-xs font-black uppercase tracking-widest text-slate-500">Leadership</span>
+                                </div>
                             </div>
-                            <p className="text-slate-500 leading-relaxed text-base font-medium">{section.content}</p>
-                        </motion.div>
-                    ))}
+                        </div>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="relative"
+                    >
+                        <div className="absolute -inset-4 bg-gradient-to-br from-jungle-jade/20 to-turkish-tile/20 rounded-[4rem] blur-3xl opacity-50" />
+                        <div className="relative bg-white rounded-[4rem] p-4 shadow-2xl border border-slate-100 overflow-hidden group">
+                            <img 
+                                src={`${import.meta.env.BASE_URL}mission_infographic_1778715244595.png`} 
+                                alt="Mission Infographic" 
+                                className="w-full h-full object-cover rounded-[3.5rem] transition-transform duration-700 group-hover:scale-105"
+                            />
+                        </div>
+                    </motion.div>
                 </div>
 
-                <div className="mt-20 border-t border-slate-200 pt-20">
-                    <div className="text-center mb-12">
-                        <span className="text-primary font-black tracking-[0.3em] uppercase text-sm md:text-base mb-4 block">The TSRG Framework</span>
+                <div className="mt-32 border-t border-slate-200 pt-24">
+                    <div className="text-center mb-16">
                         <h3 className="text-4xl md:text-5xl font-black text-secondary tracking-tight">Values Built Into Our Name</h3>
                     </div>
 
@@ -139,9 +155,9 @@ const StorySection = () => {
                                 transition={{ duration: 0.5, delay: i * 0.1 }}
                                 className="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center group relative overflow-hidden"
                             >
-                                <div className="text-6xl md:text-7xl font-black text-primary mb-6 group-hover:scale-110 transition-transform relative z-10">{val.letter}</div>
-                                <div className="text-[10px] font-black uppercase tracking-widest text-slate-300 mb-6 px-3 py-1 bg-slate-50 rounded-full group-hover:bg-primary group-hover:text-white transition-all relative z-10">The {val.title} Stage</div>
-                                <div className="p-4 bg-slate-50 rounded-2xl text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300 relative z-10">
+                                <div className={`text-6xl md:text-7xl font-black ${val.color} mb-6 group-hover:scale-110 transition-transform relative z-10`}>{val.letter}</div>
+                                <div className={`text-[10px] font-black uppercase tracking-widest text-slate-300 mb-6 px-3 py-1 bg-slate-50 rounded-full group-hover:${val.bg} group-hover:text-white transition-all relative z-10`}>The {val.title} Stage</div>
+                                <div className={`p-4 bg-slate-50 rounded-2xl ${val.color} mb-6 group-hover:${val.bg} group-hover:text-white transition-colors duration-300 relative z-10`}>
                                     {val.icon}
                                 </div>
                                 <p className="text-slate-500 font-bold leading-snug relative z-10 text-sm">{val.description}</p>

@@ -167,18 +167,26 @@ const InsightsPage = () => {
         <div className="min-h-screen bg-slate-50">
             <PageHero 
                 title="Blog" 
-                subtitle="Blog posts provide the latest information on our project activities, newsletters and other noteworthy events."
-                breadcrumbs={[{ name: 'Blog', href: '#' }]}
                 backgroundImage={`${import.meta.env.BASE_URL}Header%20Images/Generic%20Banner.png`}
             />
+
+            <section className="pt-24 bg-slate-50">
+                <div className="container mx-auto px-6 max-w-7xl">
+                    <motion.p 
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-2xl md:text-3xl font-black text-secondary leading-tight tracking-tight max-w-4xl"
+                    >
+                        Blog posts provide the latest information on our project activities, newsletters and other noteworthy events.
+                    </motion.p>
+                </div>
+            </section>
 
             {/* Filter Bar */}
             <section className="sticky top-24 z-40 bg-white/90 backdrop-blur-xl shadow-sm py-4 border-b border-slate-200">
                 <div className="container mx-auto px-6 max-w-7xl overflow-x-auto no-scrollbar">
                     <div className="flex flex-nowrap md:flex-wrap items-center gap-2">
-                        <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 mr-2 shrink-0 flex items-center gap-2">
-                            <Filter size={12} /> Filter By:
-                        </span>
                         {categories.map((cat) => (
                             <button
                                 key={cat}
