@@ -124,7 +124,7 @@ const TeamPage = () => {
         },
         {
             name: "Terri L. Schreiber",
-            role: "CEO/Project Director, Researcher, Board Vice President",
+            role: "CEO, Researcher, Board Member",
             image: `${baseUrl}Team/Terri LS 2026 .png`,
             contentFocus: "Community Outreach, Project Management, Grant Writing and Coalition Building",
             education: "MBA from the University of California, Davis, and MPA from Harvard University",
@@ -132,7 +132,7 @@ const TeamPage = () => {
         },
         {
             name: "Sushma Talamanchi",
-            role: "Web Developer/Data Analyst",
+            role: "Web Developer, Data Analyst",
             image: `${baseUrl}Team/Sushma.jpg`,
             contentFocus: "Front end development and Data analytics",
             education: "BE from Sri Venkateswara University",
@@ -204,7 +204,7 @@ const TeamPage = () => {
         },
         {
             name: "Derek Coe",
-            role: "Board Member",
+            role: "Board Secretary",
             image: `${baseUrl}Team/Derek.jpg`,
             contentFocus: "Grant Writing and TSRG Development",
             education: "Master of Public Health in Health Promotion from the University of Alberta",
