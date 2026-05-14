@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import PageHero from '../components/PageHero';
 import { Heart, ShieldCheck, Phone, Mail, FileText, Smartphone, CreditCard, ExternalLink, Info, CheckCircle2 } from 'lucide-react';
 
-const DonationTierCard = ({ title, description, link, icon: Icon, delay }) => (
+const DonationTierCard = ({ title, description, link, icon: Icon, delay, colors }) => (
     <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -11,9 +11,9 @@ const DonationTierCard = ({ title, description, link, icon: Icon, delay }) => (
         transition={{ delay }}
         className="group bg-white rounded-3xl p-10 border border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full relative overflow-hidden"
     >
-        <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors" />
+        <div className={`absolute -top-10 -right-10 w-40 h-40 rounded-full blur-2xl transition-colors ${colors.bgBlur}`} />
         
-        <div className="w-16 h-16 bg-slate-50 text-slate-500 group-hover:bg-primary group-hover:text-white rounded-2xl flex items-center justify-center mb-8 transition-colors shadow-sm relative z-10">
+        <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 transition-colors shadow-sm relative z-10 ${colors.iconBg} ${colors.iconText}`}>
             <Icon size={28} />
         </div>
         
@@ -26,7 +26,7 @@ const DonationTierCard = ({ title, description, link, icon: Icon, delay }) => (
             href={link} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="mt-auto flex items-center justify-center gap-2 bg-slate-50 text-secondary hover:bg-primary hover:text-white w-full py-4 rounded-full font-black text-xs uppercase tracking-widest transition-all relative z-10 shadow-sm group-[.hover]:shadow-xl"
+            className={`mt-auto flex items-center justify-center gap-2 w-full py-4 rounded-full font-black text-xs uppercase tracking-widest transition-all relative z-10 shadow-sm group-[.hover]:shadow-xl ${colors.btn}`}
         >
             Donate via {title} <ExternalLink size={14} />
         </a>
@@ -49,7 +49,7 @@ const DonatePage = () => {
                         viewport={{ once: true }}
                         className="text-2xl md:text-3xl font-black text-secondary leading-tight tracking-tight max-w-4xl"
                     >
-                        Your donation will support our internship program, our research, and contribute to our operating budget. For every dollar you contribute, we are one step closer to finding wide-ranging solutions to the opioid epidemic.
+                        Your donation will support the development of this program! For every dollar you contribute, we are one step closer to establishing this program.
                     </motion.p>
                 </div>
             </section>
@@ -64,6 +64,12 @@ const DonatePage = () => {
                             link="https://www.paypal.com/donate/?hosted_button_id=RZ246ZFAXA8AN"
                             icon={CreditCard}
                             delay={0.1}
+                            colors={{
+                                bgBlur: "bg-turkish-tile/5 group-hover:bg-turkish-tile/20",
+                                iconBg: "bg-turkish-tile/10 group-hover:bg-turkish-tile",
+                                iconText: "text-turkish-tile group-hover:text-white",
+                                btn: "bg-turkish-tile/5 text-turkish-tile border border-turkish-tile/10 hover:bg-turkish-tile hover:text-white"
+                            }}
                         />
                         <DonationTierCard 
                             title="ColoradoGives"
@@ -71,6 +77,12 @@ const DonatePage = () => {
                             link="https://www.coloradogives.org/organization/TheSchreiberResearchGroup"
                             icon={Heart}
                             delay={0.2}
+                            colors={{
+                                bgBlur: "bg-jungle-jade/5 group-hover:bg-jungle-jade/20",
+                                iconBg: "bg-jungle-jade/10 group-hover:bg-jungle-jade",
+                                iconText: "text-jungle-jade group-hover:text-white",
+                                btn: "bg-jungle-jade/5 text-jungle-jade border border-jungle-jade/10 hover:bg-jungle-jade hover:text-white"
+                            }}
                         />
                         <DonationTierCard 
                             title="Venmo"
@@ -78,6 +90,12 @@ const DonatePage = () => {
                             link="https://venmo.com/u/TheSchreiberResearchGroup"
                             icon={Smartphone}
                             delay={0.3}
+                            colors={{
+                                bgBlur: "bg-persimmon/5 group-hover:bg-persimmon/20",
+                                iconBg: "bg-persimmon/10 group-hover:bg-persimmon",
+                                iconText: "text-persimmon group-hover:text-white",
+                                btn: "bg-persimmon/5 text-persimmon border border-persimmon/10 hover:bg-persimmon hover:text-white"
+                            }}
                         />
                     </div>
                 </div>

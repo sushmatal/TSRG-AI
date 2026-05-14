@@ -261,7 +261,7 @@ const TeamPage = () => {
             <PageHero
                 title="Our Team"
                 backgroundImage={`${baseUrl}Header%20Images/Header.png`}
-                imageAlignment="object-top"
+                imageAlignment="object-center"
             />
 
             <section className="pt-24 pb-12 bg-slate-50">

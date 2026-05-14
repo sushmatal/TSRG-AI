@@ -38,7 +38,7 @@ const Header = () => {
             ]
         },
         {
-            name: 'Programs', // Explore Our Work
+            name: 'Our Work',
             href: '/about/explore-our-work',
             submenu: [
                 { 

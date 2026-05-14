@@ -11,10 +11,10 @@ import PageHero from '../components/PageHero';
 ───────────────────────────────────────────── */
 const ExploreOurWork = () => {
   const focusAreas = [
-    { title: "Opioids", icon: <Activity />, color: "from-turkish-tile to-[#2A5161]", desc: "Crisis response & harm reduction" },
-    { title: "Benzodiazepines", icon: <ShieldPlus />, color: "from-jungle-jade to-[#4D8F87]", desc: "Risk mitigation & clinical oversight" },
     { title: "Alcohol", icon: <Wine />, color: "from-persimmon to-[#D16A54]", desc: "Community prevention systems" },
+    { title: "Benzodiazepines", icon: <ShieldPlus />, color: "from-jungle-jade to-[#4D8F87]", desc: "Risk mitigation & clinical oversight" },
     { title: "Marijuana", icon: <Leaf />, color: "from-catawba to-[#3D6361]", desc: "Policy impact & health analysis" },
+    { title: "Opioids", icon: <Activity />, color: "from-turkish-tile to-[#2A5161]", desc: "Crisis response & harm reduction" },
     { title: "Vaping", icon: <Wind />, color: "from-lupine to-[#5A6D8C]", desc: "Youth prevention & outreach" }
   ];
 
@@ -41,7 +41,7 @@ const ExploreOurWork = () => {
             </h2>
             <div className="text-slate-500 text-lg font-medium leading-relaxed space-y-6 max-w-2xl">
               <p>
-                Our work focuses on one core goal: <span className="text-secondary font-bold">turning data into solutions</span> that communities can use to solve problems. 
+                TSRG is grounded in two core goals: <span className="text-secondary font-bold">elevating community voice</span> and <span className="text-secondary font-bold">transforming community-informed data into meaningful solutions.</span>
               </p>
               <p>
                 We study the substance use crisis through a public health lens, combining research, lived experience, and community collaboration to better understand what works, where gaps exist, and how systems can improve.
@@ -57,15 +57,15 @@ const ExploreOurWork = () => {
             className="lg:col-span-5 hidden lg:block"
           >
             <div className="relative group">
-                <div className="absolute -inset-4 bg-gradient-to-r from-primary/10 to-accent/10 rounded-[4rem] blur-2xl group-hover:opacity-40 transition-opacity duration-700 opacity-0" />
-                <div className="aspect-square bg-slate-50 rounded-[3.5rem] p-12 border border-slate-100 relative overflow-hidden flex items-center justify-center">
-                    <img
-                        src={`${import.meta.env.BASE_URL}strategic_infrastructure_backbone_1773950424182.png`}
-                        alt="Research Impact"
-                        className="w-full h-full object-cover opacity-80 mix-blend-multiply group-hover:scale-110 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-60" />
-                </div>
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary/10 to-accent/10 rounded-[4rem] blur-2xl group-hover:opacity-40 transition-opacity duration-700 opacity-0" />
+              <div className="bg-slate-50 rounded-[3.5rem] p-8 border border-slate-100 relative overflow-hidden flex items-center justify-center">
+                <img
+                  src={`${import.meta.env.BASE_URL}STteam.jpg`}
+                  alt="Research Impact"
+                  className="max-w-full max-h-full object-contain mx-auto group-hover:scale-105 transition-transform duration-700 rounded-[2rem]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
+              </div>
             </div>
           </motion.div>
         </div>
@@ -151,7 +151,7 @@ const Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {solutions.map((item, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -162,7 +162,7 @@ const Services = () => {
               <div className="w-20 h-20 bg-white/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary transition-all duration-500 group-hover:scale-110">
                 {React.cloneElement(item.icon, { size: 32 })}
               </div>
-              
+
               <h3 className="text-3xl font-black text-white mb-6 tracking-tight">{item.title}</h3>
               <p className="text-white/60 text-lg mb-8 leading-relaxed font-medium">{item.description}</p>
 
@@ -191,7 +191,7 @@ const HowWeWork = () => {
   const steps = [
     { title: "Identify", desc: "Pinpointing community gaps through data.", icon: <Microscope /> },
     { title: "Collaborate", desc: "Building cross-sector partnerships.", icon: <Users2 /> },
-    { title: "Implement", desc: "Turning evidence into action.", icon: <Zap /> },
+    { title: "Transform", desc: "Turning evidence into action.", icon: <Zap /> },
     { title: "Sustain", desc: "Ensuring long-term resilience.", icon: <TrendingUp /> }
   ];
 
@@ -206,12 +206,12 @@ const HowWeWork = () => {
         <div className="relative">
           {/* Connecting Line (Desktop) */}
           <div className="hidden lg:block absolute top-1/2 left-0 w-full h-1 bg-slate-100 -translate-y-1/2 z-0">
-            <motion.div 
-                initial={{ width: 0 }}
-                whileInView={{ width: '100%' }}
-                viewport={{ once: true }}
-                transition={{ duration: 2, ease: "easeInOut" }}
-                className="h-full bg-accent"
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: '100%' }}
+              viewport={{ once: true }}
+              transition={{ duration: 2, ease: "easeInOut" }}
+              className="h-full bg-accent"
             />
           </div>
 
@@ -223,13 +223,13 @@ const HowWeWork = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.2, duration: 0.5 }}
-                className="group"
+                className="group h-full"
               >
-                <div className="bg-slate-50 p-10 rounded-[3rem] border border-slate-100 hover:shadow-xl transition-all duration-700 flex flex-col items-center text-center relative">
+                <div className="bg-slate-50 p-10 rounded-[3rem] border border-slate-100 hover:shadow-xl transition-all duration-700 flex flex-col items-center text-center relative h-full">
                   <div className="w-16 h-16 bg-white border border-slate-100 text-primary rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:bg-primary group-hover:text-white group-hover:scale-110 transition-all duration-500">
                     {React.cloneElement(s.icon, { size: 28 })}
                   </div>
-                  
+
                   <h4 className="text-xl font-black text-secondary mb-4">{s.title}</h4>
                   <p className="text-slate-500 text-sm font-bold leading-relaxed">{s.desc}</p>
                 </div>
@@ -259,7 +259,7 @@ const ExploreOurWorkPage = () => {
       {/* Intro Subtitle Section */}
       <section className="pt-24 bg-white">
         <div className="container mx-auto px-6 max-w-7xl">
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

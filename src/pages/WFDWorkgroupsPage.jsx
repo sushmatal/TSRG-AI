@@ -37,6 +37,9 @@ const WFDWorkgroupsPage = () => {
                             </p>
                             <div className="space-y-6 text-slate-500 text-lg leading-relaxed font-medium">
                                 <p>
+                                    The Schreiber Research Group has identified the need for a Workforce Center for people in recovery to gain the skills and resources necessary, creating competitive job applicants and ultimately securing stable employment.
+                                </p>
+                                <p>
                                     Our mission is to help individuals avoid relapse by providing comprehensive job-related services. We focus on assisting individuals in improving their technical skills, education levels, and obtaining industry-related certifications.
                                 </p>
                                 <p>
