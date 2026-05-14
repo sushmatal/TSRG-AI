@@ -67,7 +67,7 @@ const ResearchPage = () => {
                             </div>
                             <h2 className="text-4xl md:text-6xl font-black text-secondary mb-10 leading-[1.1] tracking-tight">
                                 A Collaborative, <br />
-                                <span className="text-turkish-tile italic">Multipronged</span> Approach.
+                                <span className="text-turkish-tile italic text-5xl font-black">Multipronged</span> Approach.
                             </h2>
                             <p className="text-secondary text-2xl font-bold leading-snug mb-8">
                                 We select research topics and community partnerships that enable a patchwork of sustainable solutions.
@@ -88,13 +88,8 @@ const ResearchPage = () => {
                             viewport={{ once: true }}
                             className="bg-slate-50 rounded-[3.5rem] p-12 border border-slate-100 relative"
                         >
-                            <div className="absolute -top-10 -left-10 bg-white shadow-xl p-8 rounded-3xl border border-slate-50 max-w-xs hidden md:block">
-                                <Zap className="text-persimmon mb-4" size={32} />
-                                <p className="text-slate-500 font-bold leading-relaxed text-sm">
-                                    "We exist in the space between stories and systems, turning knowledge into action."
-                                </p>
-                            </div>
-                            <div className="space-y-6">
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32 transition-all group-hover:bg-white/20 hidden md:block" />
+                            <div className="space-y-6 pt-24">
                                 {topics.map((topic, i) => (
                                     <div key={i} className="flex gap-4 group">
                                         <div className="w-6 h-6 rounded-full bg-turkish-tile/10 flex items-center justify-center shrink-0 mt-1 group-hover:bg-turkish-tile group-hover:text-white transition-colors">
@@ -156,7 +151,6 @@ const ResearchPage = () => {
                             viewport={{ once: true }}
                             className="bg-secondary rounded-[3.5rem] p-12 md:p-16 relative overflow-hidden group"
                         >
-                            <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -mr-32 -mt-32 transition-all group-hover:bg-white/10" />
                             <div className="relative z-10">
                                 <h3 className="text-3xl font-black text-white mb-6">Opioid Research</h3>
                                 <p className="text-slate-300 text-lg mb-10 leading-relaxed font-medium">
@@ -175,8 +169,9 @@ const ResearchPage = () => {
                             viewport={{ once: true }}
                             className="bg-persimmon rounded-[3.5rem] p-12 md:p-16 relative overflow-hidden group"
                         >
-                            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32 transition-all group-hover:bg-white/20" />
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32 transition-all group-hover:bg-white/20 hidden md:block" />
                             <div className="relative z-10">
+                                <h3 className="text-2xl font-black text-white mb-4">Prescribing and Tapering</h3>
                                 <h3 className="text-3xl font-black text-white mb-6">Benzodiazepine Research</h3>
                                 <p className="text-white/80 text-lg mb-10 leading-relaxed font-medium">
                                     Investigating dependency, neurological dysfunction (BIND), and evidence-based tapering strategies.

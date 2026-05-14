@@ -272,7 +272,7 @@ const TeamPage = () => {
                         viewport={{ once: true }}
                         className="text-2xl md:text-4xl font-black text-secondary leading-tight tracking-tight w-full mb-16 text-left"
                     >
-                        A diverse collective of researchers, advocates, and data scientists dedicated to rural resilience, providing the backbone support behind every initiative.
+                        A diverse and highly collaborative team of researchers, analysts, and community advocates dedicated to strengthening community resilience and providing strategic backbone support for impactful initiatives.
                     </motion.p>
                 </div>
             </section>

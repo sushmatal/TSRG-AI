@@ -93,7 +93,7 @@ const ContactPage = () => {
                         <div className="flex flex-col gap-8 justify-center">
                             <div className="mb-12">
 
-                                <h2 className="text-4xl md:text-5xl font-black text-secondary leading-tight mb-6">Let's connect <br />with our team.</h2>
+                                <h2 className="text-4xl md:text-5xl font-black text-secondary leading-tight mb-6">Join us in building stronger communities.</h2>
                                 <p className="text-slate-500 text-lg leading-relaxed max-w-md">
                                     TSRG operates as a backbone partner, and we're always looking for new collaborators to strengthen the network.
                                 </p>
@@ -125,7 +125,7 @@ const ContactPage = () => {
                             <div className="mt-12 p-8 bg-slate-900 rounded-[2.5rem] text-white flex items-center justify-between group">
                                 <div>
                                     <h4 className="text-xl font-black mb-2">Support Our Work</h4>
-                                    <p className="text-slate-400 text-sm">Every contribution fuels rural research.</p>
+                                    <p className="text-slate-400 text-sm">Every contribution helps turn community voice into meaningful solutions.</p>
                                 </div>
                                 <Link to="/get-involved/donate" className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-white group-hover:bg-primary transition-all">
                                     <Heart size={24} className="group-hover:fill-white" />

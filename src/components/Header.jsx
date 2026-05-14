@@ -31,11 +31,10 @@ const Header = () => {
         {
             name: 'About',
             href: '/about',
-            submenu: [
-                { name: 'Contact', href: '/about/contact' },
-                { name: 'FAQs', href: '/about/faqs' },
-                { name: 'Our Team', href: '/about/team' },
-            ]
+                submenu: [
+                    { name: 'Contact', href: '/about/contact' },
+                    { name: 'Our Team', href: '/about/team' },
+                ]
         },
         {
             name: 'Our Work',

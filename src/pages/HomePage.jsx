@@ -132,7 +132,7 @@ const StorySection = () => {
                         <div className="absolute -inset-4 bg-gradient-to-br from-jungle-jade/20 to-turkish-tile/20 rounded-[4rem] blur-3xl opacity-50" />
                         <div className="relative bg-white rounded-[4rem] p-4 shadow-2xl border border-slate-100 overflow-hidden group">
                             <img 
-                                src={`${import.meta.env.BASE_URL}mission_infographic_1778715244595.png`} 
+                                src={`${import.meta.env.BASE_URL}Mission.jpg`} 
                                 alt="Mission Infographic" 
                                 className="w-full h-full object-cover rounded-[3.5rem] transition-transform duration-700 group-hover:scale-105"
                             />

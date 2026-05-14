@@ -61,10 +61,8 @@ const OurStory = () => (
                 </p>
               </div>
             </div>
-            <div className="absolute -top-10 -right-5 bg-accent text-white p-6 rounded-3xl shadow-xl z-10">
-              <div className="text-md font-black mb-1 leading-tight">TSRG Since</div>
-              <div className="text-3xl font-black uppercase tracking-tight">2018</div>
-            </div>
+            <div className="w-4 h-4 bg-accent rounded-full animate-ping mb-4" />
+            <h3 className="text-2xl font-black text-secondary">TSRG | Est. 2018</h3>
           </motion.div>
         </div>
       </div>
@@ -244,15 +242,15 @@ const AboutPage = () => {
       {/* Intro Subtitle Section */}
       <section className="pt-24 bg-white">
         <div className="container mx-auto px-6 max-w-7xl">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-2xl md:text-4xl font-black text-secondary leading-tight tracking-tight max-w-4xl"
-          >
-            TSRG brings people, data, and action together to reduce substance use harm and build healthier futures.
-          </motion.p>
-          <div className="w-24 h-1 bg-primary mt-10" />
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="text-2xl md:text-4xl font-black text-secondary leading-tight tracking-tight max-w-4xl"
+                >
+                  TSRG brings people and data together to find solutions that will reduce substance use harm and build healthier communities.
+                </motion.p>
+                <div className="w-24 h-1 bg-primary mt-10" />
         </div>
       </section>
 
