@@ -23,7 +23,7 @@ const InsightDetailPage = () => {
             {/* Contextual Header */}
             <div className="sticky top-24 z-40 bg-white/90 backdrop-blur-xl border-b border-slate-100 py-4 hidden md:block">
                 <div className="container mx-auto px-6 max-w-7xl flex items-center justify-between">
-                    <Link to="/insights" className="flex items-center gap-2 text-xs font-black uppercase tracking-widest text-slate-400 hover:text-primary transition-colors">
+                    <Link to="/about/blog" className="flex items-center gap-2 text-xs font-black uppercase tracking-widest text-slate-400 hover:text-primary transition-colors">
                         <ArrowLeft size={16} /> Back to Hub
                     </Link>
                     <div className="flex gap-4">

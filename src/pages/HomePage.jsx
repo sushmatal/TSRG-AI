@@ -75,10 +75,10 @@ const Hero = () => {
 ───────────────────────────────────────────── */
 const StorySection = () => {
     const values = [
-        { letter: "T", title: "Trust", description: "Building long-term, ethical relationships with rural leaders and families.", icon: <ShieldCheck size={20} />, color: "text-lupine", bg: "bg-lupine" },
-        { letter: "S", title: "Service", description: "Delivering actionable insights that solve immediate community needs efficiently.", icon: <Activity size={20} />, color: "text-catawba", bg: "bg-catawba" },
+        { letter: "T", title: "Trust", description: "Building long-term partnerships with rural and urban leaders.", icon: <ShieldCheck size={20} />, color: "text-lupine", bg: "bg-lupine" },
+        { letter: "S", title: "Service", description: "Delivering actionable insights that solve community needs effectively and efficiently.", icon: <Activity size={20} />, color: "text-catawba", bg: "bg-catawba" },
         { letter: "R", title: "Research", description: "Providing evidence-based methodologies and rigorous evaluation to inform local solutions.", icon: <SearchCheck size={20} />, color: "text-turkish-tile", bg: "bg-turkish-tile" },
-        { letter: "G", title: "Guidance", description: "Navigating complex systems to lead sustainable long-term success.", icon: <Settings size={20} />, color: "text-persimmon", bg: "bg-persimmon" }
+        { letter: "G", title: "Guidance", description: "Navigating complex systems to lead sustainable long-term outcomes.", icon: <Settings size={20} />, color: "text-persimmon", bg: "bg-persimmon" }
     ];
 
     return (

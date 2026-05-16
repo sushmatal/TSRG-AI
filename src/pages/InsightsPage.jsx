@@ -32,14 +32,14 @@ const FeaturedInsightCard = ({ title, category, summary, date, readTime, image, 
                 <div className="flex items-center gap-2"><Clock size={14} /> {readTime}</div>
             </div>
             <h2 className="text-3xl md:text-5xl font-black mb-6 leading-tight group-hover:text-primary transition-colors">
-                <Link to={`/insights/${id}`}>{title}</Link>
+                <Link to={`/about/blog/${id}`}>{title}</Link>
             </h2>
             <p className="text-slate-300 text-lg leading-relaxed mb-10 max-w-xl line-clamp-3">
                 {summary}
             </p>
             <div className="mt-auto">
                 <Link 
-                    to={`/insights/${id}`} 
+                    to={`/about/blog/${id}`} 
                     className="inline-flex items-center gap-3 bg-white text-secondary px-8 py-4 rounded-full text-xs font-black uppercase tracking-widest hover:bg-primary hover:text-white transition-all shadow-xl hover:shadow-primary/30 hover:gap-5"
                 >
                     Read Full Story <ArrowRight size={16} />
@@ -75,13 +75,13 @@ const InsightCard = ({ title, category, summary, date, readTime, image, id, dela
                 <div className="flex items-center gap-1.5"><Calendar size={12} /> {date}</div>
             </div>
             <h3 className="text-xl font-black text-secondary mb-4 leading-snug group-hover:text-primary transition-colors line-clamp-2">
-                <Link to={`/insights/${id}`}>{title}</Link>
+                <Link to={`/about/blog/${id}`}>{title}</Link>
             </h3>
             <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-1 line-clamp-3">
                 {summary}
             </p>
             <Link 
-                to={`/insights/${id}`} 
+                to={`/about/blog/${id}`} 
                 className="inline-flex mt-auto items-center gap-2 text-[10px] font-black uppercase tracking-widest text-secondary group-hover:text-primary transition-all"
             >
                 Read More <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import PageHero from '../components/PageHero';
 import { Mail, Phone, MapPin, Send, MessageSquare, Globe, Heart } from 'lucide-react';
+
 const ContactInfoCard = ({ icon: Icon, title, content, link, delay }) => (
     <motion.div
         initial={{ opacity: 0, x: -20 }}
@@ -131,29 +132,6 @@ const ContactPage = () => {
                                     <Heart size={24} className="group-hover:fill-white" />
                                 </Link>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Map Section */}
-            <section className="py-24 bg-slate-50 relative overflow-hidden">
-                <div className="container mx-auto px-6 max-w-7xl relative z-10">
-                    <div className="bg-white rounded-[4rem] overflow-hidden shadow-2xl border border-slate-100 flex flex-col">
-                        <div className="w-full relative flex">
-                             <img 
-                                src={`${import.meta.env.BASE_URL}Contact/Screenshot%202026-05-13%20181328.jpg`} 
-                                className="w-full h-auto object-contain" 
-                                alt="Contact Section Image"
-                             />
-                             <div className="absolute inset-0 bg-primary/10 backdrop-blur-[1px]" />
-                             <div className="absolute inset-0 p-8 md:p-16 lg:p-24 flex items-start justify-start">
-                                <div className="bg-white/90 backdrop-blur-md px-8 py-6 rounded-3xl shadow-2xl text-left inline-block">
-                                    <div className="w-4 h-4 bg-accent rounded-full animate-ping mb-4" />
-                                    <h3 className="text-2xl font-black text-secondary">Colorado</h3>
-                                    <p className="text-xs font-bold text-primary uppercase tracking-[0.2em]">Primary Service Region</p>
-                                </div>
-                             </div>
                         </div>
                     </div>
                 </div>

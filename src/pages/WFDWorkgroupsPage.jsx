@@ -103,75 +103,98 @@ const WFDWorkgroupsPage = () => {
                                 </div>
                             </div>
 
-                        <div className="space-y-6">
-                            <h3 className="text-xs font-black uppercase tracking-[0.3em] text-white/40 mb-4">Leadership & Support</h3>
+                            <div className="space-y-6">
+                                <h3 className="text-xs font-black uppercase tracking-[0.3em] text-white/40 mb-4">Leadership & Support</h3>
 
-                            {/* Community Leader */}
-                            <div className="bg-white/5 p-8 rounded-[2.5rem] border border-white/10 flex items-center justify-between group hover:bg-white/10 transition-all">
-                                <div>
-                                    <p className="text-[10px] font-black uppercase tracking-widest text-turkish-tile mb-2">Community Leader</p>
-                                    <h4 className="text-white font-black text-xl mb-1">Donna Rohde</h4>
-                                    <p className="text-slate-400 text-sm">Huerfano County Public Health</p>
-                                </div>
-                                <a href="mailto:tarac@mhyc.net" className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-white hover:bg-turkish-tile transition-colors">
-                                    <Mail size={20} />
-                                </a>
-                            </div>
-
-                            {/* TSRG Support */}
-                            <div className="bg-white/5 p-8 rounded-[2.5rem] border border-white/10 flex flex-col gap-6">
-                                <p className="text-[10px] font-black uppercase tracking-widest text-persimmon">TSRG Support Contact</p>
-                                <div className="flex items-center justify-between">
+                                {/* Community Leader */}
+                                <div className="bg-white/5 p-8 rounded-[2.5rem] border border-white/10 flex items-center justify-between group hover:bg-white/10 transition-all">
                                     <div>
-                                        <h4 className="text-white font-black text-lg">Tori Hodkin</h4>
-                                        <p className="text-slate-400 text-xs">tori@tsrg.org</p>
+                                        <p className="text-[10px] font-black uppercase tracking-widest text-turkish-tile mb-2">Community Leader</p>
+                                        <h4 className="text-white font-black text-xl mb-1">Donna Rohde</h4>
+                                        <p className="text-slate-400 text-sm">Otero County Public Health</p>
                                     </div>
-                                    <a href="mailto:tori@tsrg.org" className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center text-white hover:bg-persimmon transition-colors">
-                                        <Mail size={18} />
+                                    <a href="mailto:tarac@mhyc.net" className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-white hover:bg-turkish-tile transition-colors">
+                                        <Mail size={20} />
                                     </a>
                                 </div>
-                                <div className="flex items-center justify-between">
-                                    <div>
-                                        <h4 className="text-white font-black text-lg">Terri Schreiber</h4>
-                                        <p className="text-slate-400 text-xs">terri@tsrg.org</p>
+
+                                {/* TSRG Support */}
+                                <div className="bg-white/5 p-8 rounded-[2.5rem] border border-white/10 flex flex-col gap-6">
+                                    <p className="text-[10px] font-black uppercase tracking-widest text-persimmon">TSRG Support Contact</p>
+                                    <div className="flex items-center justify-between">
+                                        <div>
+                                            <h4 className="text-white font-black text-lg">Tori Hodkin</h4>
+                                            <p className="text-slate-400 text-xs">tori@tsrg.org</p>
+                                        </div>
+                                        <a href="mailto:tori@tsrg.org" className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center text-white hover:bg-persimmon transition-colors">
+                                            <Mail size={18} />
+                                        </a>
                                     </div>
-                                    <a href="mailto:terri@tsrg.org" className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center text-white hover:bg-persimmon transition-colors">
-                                        <Mail size={18} />
-                                    </a>
+                                    <div className="flex items-center justify-between">
+                                        <div>
+                                            <h4 className="text-white font-black text-lg">Terri Schreiber</h4>
+                                            <p className="text-slate-400 text-xs">terri@tsrg.org</p>
+                                        </div>
+                                        <a href="mailto:terri@tsrg.org" className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center text-white hover:bg-persimmon transition-colors">
+                                            <Mail size={18} />
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-        </div>
             </section >
 
-    {/* Meeting Schedule */ }
-    < section className = "py-24 bg-white" >
-        <div className="container mx-auto px-6 max-w-7xl">
-            <div className="bg-jungle-jade/5 p-12 md:p-24 rounded-[4rem] border border-jungle-jade/10 text-center">
-                <div className="w-16 h-16 bg-jungle-jade/10 rounded-2xl flex items-center justify-center text-jungle-jade mx-auto mb-10">
-                    <Calendar size={32} />
-                </div>
-                <h2 className="text-3xl md:text-5xl font-black text-secondary tracking-tight mb-8">Join Our Monthly Meeting</h2>
-                <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
-                    <div className="flex items-center gap-4">
-                        <Calendar className="text-jungle-jade" />
-                        <span className="text-xl font-bold text-secondary">Third Monday of every month</span>
+            {/* Meeting Schedule */}
+            <section className="py-24 bg-white">
+                <div className="container mx-auto px-6 max-w-7xl">
+                    <div className="bg-jungle-jade/5 p-12 md:p-24 rounded-[4rem] border border-jungle-jade/10 text-center">
+                        <div className="w-16 h-16 bg-jungle-jade/10 rounded-2xl flex items-center justify-center text-jungle-jade mx-auto mb-10">
+                            <Calendar size={32} />
+                        </div>
+                        <h2 className="text-3xl md:text-5xl font-black text-secondary tracking-tight mb-8">Join Our Monthly Meeting</h2>
+                        <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
+                            <div className="flex items-center gap-4">
+                                <Calendar className="text-jungle-jade" />
+                                <span className="text-xl font-bold text-secondary">Third Monday of every month</span>
+                            </div>
+                            <div className="h-2 w-2 rounded-full bg-slate-200 hidden md:block" />
+                            <div className="flex items-center gap-4">
+                                <Video className="text-jungle-jade" />
+                                <span className="text-xl font-bold text-secondary">12:00 PM - 1:00 PM (Zoom)</span>
+                            </div>
+                        </div>
+                        <button className="bg-secondary text-white px-12 py-6 rounded-full font-black uppercase tracking-widest text-sm hover:bg-turkish-tile transition-all flex items-center justify-center gap-3 mx-auto shadow-2xl shadow-secondary/20">
+                            Get Meeting Link <ArrowRight size={20} />
+                        </button>
                     </div>
-                    <div className="h-2 w-2 rounded-full bg-slate-200 hidden md:block" />
-                    <div className="flex items-center gap-4">
-                        <Video className="text-jungle-jade" />
-                        <span className="text-xl font-bold text-secondary">12:00 PM - 1:00 PM (Zoom)</span>
+                </div>
+            </section>
+
+            {/* Map Section */}
+            <section className="py-24 bg-slate-50 relative overflow-hidden">
+                <div className="container mx-auto px-6 max-w-7xl relative z-10">
+                    <div className="bg-white rounded-[4rem] overflow-hidden shadow-2xl border border-slate-100 flex flex-col">
+                        <div className="w-full relative flex">
+                            <img
+                                src={`${import.meta.env.BASE_URL}Contact/Screenshot%202026-05-13%20181328.jpg`}
+                                className="w-full h-auto object-contain"
+                                alt="Primary Service Region Map"
+                            />
+                            <div className="absolute inset-0 bg-primary/10 backdrop-blur-[1px]" />
+                            <div className="absolute inset-0 p-8 md:p-16 lg:p-24 flex items-start justify-start">
+                                <div className="bg-white/90 backdrop-blur-md px-8 py-6 rounded-3xl shadow-2xl text-left inline-block">
+                                    <div className="w-4 h-4 bg-accent rounded-full animate-ping mb-4" />
+                                    <h3 className="text-2xl font-black text-secondary">Colorado</h3>
+                                    <p className="text-xs font-bold text-primary uppercase tracking-[0.2em]">Primary Service Region</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <button className="bg-secondary text-white px-12 py-6 rounded-full font-black uppercase tracking-widest text-sm hover:bg-turkish-tile transition-all flex items-center justify-center gap-3 mx-auto shadow-2xl shadow-secondary/20">
-                    Get Meeting Link <ArrowRight size={20} />
-                </button>
-            </div>
+            </section>
         </div>
-            </section >
-        </div >
     );
 };
 

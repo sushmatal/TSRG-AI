@@ -93,7 +93,7 @@ const MissionVisionPurpose = () => {
             </div>
             <h3 className="text-4xl font-black text-secondary mb-8 tracking-tight">Our <span className="text-turkish-tile italic">Vision</span></h3>
             <p className="text-slate-500 text-lg md:text-xl leading-relaxed font-medium">
-              We believe building healthy rural and urban communities starts with listening. We lead projects or partner with community coalitions to find solutions to community challenges and then bring partners together to turn knowledge into lasting change.
+              We believe building healthy rural and urban communities starts with listening. By amplifying local knowledge, agency is given back to communities most disenfranchised by the opioid crisis. We envision neighborhoods where access to employment, health services, and resources that promote recovery are accessible to all -- creating the conditions for dignified lives and empowered communities.
             </p>
           </motion.div>
 

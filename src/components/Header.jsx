@@ -31,15 +31,16 @@ const Header = () => {
         {
             name: 'About',
             href: '/about',
-                submenu: [
-                    { name: 'Contact', href: '/about/contact' },
-                    { name: 'Our Team', href: '/about/team' },
-                ]
+            submenu: [
+                { name: 'Contact', href: '/about/contact' },
+                { name: 'Our Team', href: '/about/team' },
+            ]
         },
         {
             name: 'Our Work',
             href: '/about/explore-our-work',
             submenu: [
+                { name: 'Data Dashboard', href: '/programs/dashboard' },
                 { 
                     name: 'Research', 
                     href: '/insights/research',
@@ -48,17 +49,14 @@ const Header = () => {
                         { name: 'Opioids', href: '/insights/research/opioids' }
                     ]
                 },
-                { name: 'Community Outreach', href: '/programs/outreach' },
-                { name: 'Data Dashboard', href: '/programs/dashboard' },
             ]
         },
         {
             name: 'Partner Up',
             href: '/about/partners',
             submenu: [
+                { name: 'Community Outreach', href: '/programs/outreach' },
                 { name: 'WFD Workgroup', href: '/programs/workgroups' },
-                { name: 'Data & Research', href: '/insights/research' },
-                { name: 'Community Engagement', href: '/programs/outreach' },
             ]
         },
         {

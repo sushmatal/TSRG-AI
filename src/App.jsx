@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import TeamPage from './pages/TeamPage'
 import DashboardPage from './pages/DashboardPage'
+import ResourcesPage from './pages/ResourcesPage'
 import InsightsPage from './pages/InsightsPage'
 import InsightDetailPage from './pages/InsightDetailPage'
 import ResearchPage from './pages/ResearchPage'
@@ -20,7 +21,6 @@ import OpioidsPage from './pages/OpioidsPage'
 import OutreachPage from './pages/OutreachPage'
 import WFDWorkgroupsPage from './pages/WFDWorkgroupsPage'
 import { 
-  BlogPage,
   FAQsPage,
   GatewayToWorkPage,
   PIMSFormsPage,
@@ -39,7 +39,7 @@ function App() {
           {/* About */}
           <Route path="/about" element={<AboutPage />} />
           <Route path="/about/explore-our-work" element={<ExploreOurWorkPage />} />
-          <Route path="/about/blog" element={<BlogPage />} />
+          <Route path="/about/blog" element={<InsightsPage />} />
           <Route path="/about/contact" element={<ContactPage />} />
           <Route path="/about/faqs" element={<FAQsPage />} />
           <Route path="/about/team" element={<TeamPage />} />
@@ -55,9 +55,9 @@ function App() {
           <Route path="/programs/scholarships" element={<ScholarshipsPage />} />
           <Route path="/programs/workgroups" element={<WFDWorkgroupsPage />} />
           
-          {/* Insights */}
-          <Route path="/insights" element={<InsightsPage />} />
-          <Route path="/insights/:id" element={<InsightDetailPage />} />
+          {/* Insights / Resources */}
+          <Route path="/insights" element={<ResourcesPage />} />
+          <Route path="/about/blog/:id" element={<InsightDetailPage />} />
           <Route path="/insights/research" element={<ResearchPage />} />
           <Route path="/insights/research/benzodiazepines" element={<BenzodiazepinesPage />} />
           <Route path="/insights/research/opioids" element={<OpioidsPage />} />
