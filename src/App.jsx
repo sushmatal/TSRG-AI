@@ -21,7 +21,6 @@ import OpioidsPage from './pages/OpioidsPage'
 import OutreachPage from './pages/OutreachPage'
 import WFDWorkgroupsPage from './pages/WFDWorkgroupsPage'
 import { 
-  FAQsPage,
   GatewayToWorkPage,
   PIMSFormsPage,
   ScholarshipsPage,
@@ -41,7 +40,6 @@ function App() {
           <Route path="/about/explore-our-work" element={<ExploreOurWorkPage />} />
           <Route path="/about/blog" element={<InsightsPage />} />
           <Route path="/about/contact" element={<ContactPage />} />
-          <Route path="/about/faqs" element={<FAQsPage />} />
           <Route path="/about/team" element={<TeamPage />} />
           <Route path="/about/partners" element={<PartnersPage />} />
           

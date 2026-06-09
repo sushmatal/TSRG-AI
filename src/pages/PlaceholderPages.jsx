@@ -30,7 +30,6 @@ const ComingSoon = ({ title, category }) => (
 
 // About
 export const BlogPage = () => <ComingSoon title="Blog (News & Updates)" category="About" />;
-export const FAQsPage = () => <ComingSoon title="FAQs" category="About" />;
 
 // Programs & Work
 export const GatewayToWorkPage = () => <ComingSoon title="Gateway to work" category="Programs & Work" />;

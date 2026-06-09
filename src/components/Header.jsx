@@ -66,6 +66,7 @@ const Header = () => {
                 { name: 'Blogs', href: '/about/blog' },
                 { name: 'Events', href: '/insights/events' },
                 { name: 'Podcasts', href: '/programs/podcasts' },
+                { name: 'FAQs', href: '/insights#faq' },
             ]
         }
     ];
